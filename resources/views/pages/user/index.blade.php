@@ -1,6 +1,7 @@
 @extends('layouts.user.app')
 @section('page-title','Home')
 @section('main-content')
+    <!--End header-->
     <main class="main">
         <section class="home-slider position-relative mb-30">
             <div class="container">
@@ -4391,4 +4392,14 @@
         </section>
         <!--End 4 columns-->
     </main>
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="text-center">
+                    <img src="assets/imgs/theme/loading.gif" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
 @stop
