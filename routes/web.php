@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\admin\dashboard;
+use App\Http\Controllers\user\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('dashboard',[Dashboard::class,'index']);
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[HomeController::class,'index']);
