@@ -24,8 +24,8 @@
     @include('layouts.user.headers.mobile')
     <!-- Main Content -->
     @yield('main-content')
-    <!-- Preloader Component -->
-    <x-user.preloader></x-user.preloader>
+    <!-- Preloader Start -->
+    @include('layouts.user.preloader')
     <!-- Footer Content -->
     @include('layouts.user.footer')
 
