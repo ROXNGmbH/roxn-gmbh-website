@@ -55,7 +55,7 @@
             </li>
 
             <li class="menu-item">
-                <a class="menu-link" href="page-sellers-cards.html">
+                <a class="menu-link" href="{{route('manufacturing-companies.index')}}">
                     <i class="icon material-icons md-store"></i>
                     <span class="text">manufacturing companies</span>
                 </a>

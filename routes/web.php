@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\admin\CategoryController;
-use App\Http\Controllers\admin\dashboard;
+use App\Http\Controllers\admin\dashboard;;
+
+use App\Http\Controllers\admin\ManufacturingCompanyController;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\admin\ProductFlagController;
 use App\Http\Controllers\Admin\SellTypeController;
@@ -33,6 +35,7 @@ Route::group(['prefix'=>'admin'],function(){
     Route::resource('tax',TaxController::class);
     Route::resource('sell-types',SellTypeController::class);
     Route::resource('product-flags',ProductFlagController::class);
+    Route::resource('manufacturing-companies',ManufacturingCompanyController::class);
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
