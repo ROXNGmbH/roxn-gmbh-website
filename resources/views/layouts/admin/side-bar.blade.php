@@ -105,6 +105,8 @@
                 <div class="submenu">
                     <a href="{{route('units.index')}}">Units</a>
                     <a href="{{route('tax.index')}}">Tax</a>
+                    <a href="{{route('sell-types.index')}}">Sell Types</a>
+
                 </div>
             </li>
         </ul>

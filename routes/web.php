@@ -7,6 +7,7 @@ use App\Http\Controllers\admin\SubCategoryController;
 use App\Http\Controllers\admin\TaxController;
 use App\Http\Controllers\admin\UnitController;
 use App\Http\Controllers\admin\CategoryController;
+use App\Http\Controllers\Admin\SellTypeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,6 +31,7 @@ Route::group(['prefix'=>'admin'],function(){
     Route::resource('sub-categories',SubCategoryController::class);
     Route::resource('units',UnitController::class);
     Route::resource('tax',TaxController::class);
+    Route::resource('sell-types',SellTypeController::class);
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
