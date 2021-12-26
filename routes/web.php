@@ -26,7 +26,7 @@ Auth::routes();
 
 Route::get('dashboard',[Dashboard::class,'index']);
 
-Route::group(['prefix'=>'admin'],function(){
+Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function(){
     Route::get('dashboard',[Dashboard::class,'index']);
     Route::resource('products',ProductController::class);
     Route::resource('categories',CategoryController::class);
