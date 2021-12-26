@@ -39,7 +39,7 @@
                             {{$flag->id}}
                         </div>
                         <div class="col-lg-3 col-sm-2 col-4">
-                            {{$flag->name}}
+                            {{$flag->NameAr}} - {{$flag->NameDe}}
                         </div>
                         <div class="col-lg-3 col-sm-2 col-4">
                             {{$flag->created_at}}

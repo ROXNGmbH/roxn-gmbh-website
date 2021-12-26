@@ -14,15 +14,22 @@
     <form action="{{route('product-flags.update',$productFlag->id)}}" method="post">
         @csrf
         @method('PUT')
-        <div class="row justify-content-center">
+        <div class="row">
             <div class="col-md-6">
                 <div class="card mb-4">
                     <div class="card-header">
                         <h4>Information</h4>
                     </div>
                     <div class="card-body">
-                        <label for="name">Name</label>
-                        <input type="text" name="name" value="{{$productFlag->name}}" id="name" class="form-control"><br>
+                        <div>
+                            <label for="name">Name DE</label>
+                            <input type="text" name="name_de" value="{{$productFlag->NameAr}}" id="name" class="form-control"><br>
+
+                        </div>
+                        <div>
+                            <label for="name">Name AR</label>
+                            <input type="text" name="name_ar" value="{{$productFlag->NameDe}}"  id="name" class="form-control"><br>
+                        </div>
                         <button class="btn btn-primary" type="submit">Save</button>
                     </div>
                 </div>
