@@ -1,13 +1,13 @@
 <?php
 
+use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\dashboard;
-use App\Http\Controllers\user\HomeController;
 use App\Http\Controllers\admin\ProductController;
+use App\Http\Controllers\admin\ProductFlagController;
+use App\Http\Controllers\Admin\SellTypeController;
 use App\Http\Controllers\admin\SubCategoryController;
 use App\Http\Controllers\admin\TaxController;
 use App\Http\Controllers\admin\UnitController;
-use App\Http\Controllers\admin\CategoryController;
-use App\Http\Controllers\Admin\SellTypeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,6 +32,7 @@ Route::group(['prefix'=>'admin'],function(){
     Route::resource('units',UnitController::class);
     Route::resource('tax',TaxController::class);
     Route::resource('sell-types',SellTypeController::class);
+    Route::resource('product-flags',ProductFlagController::class);
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

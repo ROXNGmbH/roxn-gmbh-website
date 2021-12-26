@@ -106,6 +106,7 @@
                     <a href="{{route('units.index')}}">Units</a>
                     <a href="{{route('tax.index')}}">Tax</a>
                     <a href="{{route('sell-types.index')}}">Sell Types</a>
+                    <a href="{{route('product-flags.index')}}">Product Flags</a>
 
                 </div>
             </li>
