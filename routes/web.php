@@ -1,8 +1,9 @@
 <?php
 
 use App\Http\Controllers\admin\CategoryController;
-use App\Http\Controllers\admin\dashboard;;
+use App\Http\Controllers\admin\dashboard;
 
+use App\Http\Controllers\admin\DeliveryTimeController;
 use App\Http\Controllers\admin\ManufacturingCompanyController;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\admin\ProductFlagController;
@@ -10,6 +11,7 @@ use App\Http\Controllers\Admin\SellTypeController;
 use App\Http\Controllers\admin\SubCategoryController;
 use App\Http\Controllers\admin\TaxController;
 use App\Http\Controllers\admin\UnitController;
+use App\Http\Controllers\user\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,7 +26,8 @@ use Illuminate\Support\Facades\Route;
 */
 Auth::routes();
 
-Route::get('dashboard',[Dashboard::class,'index']);
+
+Route::get('/',[HomeController::class,'index']);
 
 Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function(){
     Route::get('dashboard',[Dashboard::class,'index']);
@@ -36,6 +39,7 @@ Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function(){
     Route::resource('sell-types',SellTypeController::class);
     Route::resource('product-flags',ProductFlagController::class);
     Route::resource('manufacturing-companies',ManufacturingCompanyController::class);
+    Route::resource('delivery-times',DeliveryTimeController::class);
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
