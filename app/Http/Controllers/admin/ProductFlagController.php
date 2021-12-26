@@ -40,11 +40,15 @@ class ProductFlagController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'name' => 'required|string|max:55'
+            'name_ar' => 'required|string|max:55',
+            'name_de' => 'required|string|max:55'
         ]);
 
         try{
-            ProductFlag::create($data);
+            ProductFlag::create(['name' => [
+                'ar' => $data['name_ar'],
+                'de' => $data['name_de']
+            ]]);
 
             toast('Your added product flag successfully', 'success');
 
@@ -52,7 +56,6 @@ class ProductFlagController extends Controller
 
         }catch(\Exception $exception){
 
-            dd($exception->getMessage());
             toast('Something error !', 'error');
 
             return redirect()->route('product-flags.index');
@@ -92,11 +95,15 @@ class ProductFlagController extends Controller
     public function update(Request $request, ProductFlag $productFlag)
     {
         $data = $request->validate([
-            'name' => 'required|string|max:55'
+            'name_ar' => 'required|string|max:55',
+            'name_de' => 'required|string|max:55'
         ]);
 
         try{
-            $productFlag->update($data);
+            $productFlag->update(['name' => [
+                'ar' => $data['name_ar'],
+                'de' => $data['name_de']]
+            ]);
 
             toast('You edit product flag successfully', 'success');
 

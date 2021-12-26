@@ -15,7 +15,7 @@ class CreateProductFlagsTable extends Migration
     {
         Schema::create('product_flags', function (Blueprint $table) {
             $table->id();
-            $table->string('name',20);
+            $table->json('name');
             $table->timestamps();
         });
     }
