@@ -12,6 +12,7 @@
     <link href="{{asset('assets/admin/css/main.css?v=1.1')}}" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+    @include('sweetalert::alert')
 <!-- Page overlay component -->
     <x-admin.overlay></x-admin.overlay>
 
@@ -43,4 +44,6 @@
     <!-- Main Script -->
     <script src="{{asset('assets/admin/js/main.js?v=1.1')}}" type="text/javascript"></script>
     <script src="{{asset('assets/admin/js/custom-chart.js')}}" type="text/javascript"></script>
+
+    @yield('scripts')
 </body>
