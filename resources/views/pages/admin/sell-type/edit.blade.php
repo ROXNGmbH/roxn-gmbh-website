@@ -21,8 +21,15 @@
                         <h4>Information</h4>
                     </div>
                     <div class="card-body">
-                        <label for="name">Name</label>
-                        <input type="text" name="name" value="{{$sellType->name}}" id="name" class="form-control"><br>
+                        <div>
+                            <label for="name">Name DE</label>
+                            <input type="text" name="name_de" value="{{$sellType->NameAr}}" id="name" class="form-control"><br>
+
+                        </div>
+                        <div>
+                            <label for="name">Name AR</label>
+                            <input type="text" name="name_ar" value="{{$sellType->NameDe}}" id="name" class="form-control"><br>
+                        </div>
                         <button class="btn btn-primary" type="submit">Save</button>
                     </div>
                 </div>

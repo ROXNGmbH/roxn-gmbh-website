@@ -39,7 +39,7 @@
                             {{$type->id}}
                         </div>
                         <div class="col-lg-3 col-sm-2 col-4">
-                            {{$type->name}}
+                            {{$type->NameAr}} - {{$type->NameDe}}
                         </div>
                         <div class="col-lg-3 col-sm-2 col-4">
                             {{$type->created_at}}
