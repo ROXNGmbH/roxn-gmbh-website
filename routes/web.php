@@ -1,11 +1,11 @@
 <?php
 
 use App\Http\Controllers\admin\dashboard;
+use App\Http\Controllers\user\HomeController;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\admin\SubCategoryController;
 use App\Http\Controllers\admin\TaxController;
 use App\Http\Controllers\admin\UnitController;
-use App\Http\Controllers\user\HomeController;
 use App\Http\Controllers\admin\CategoryController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,10 +19,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
 Route::get('dashboard',[Dashboard::class,'index']);
-
-Route::get('/',[HomeController::class,'index']);
 
 Route::group(['prefix'=>'admin'],function(){
     Route::get('dashboard',[Dashboard::class,'index']);
@@ -32,3 +31,6 @@ Route::group(['prefix'=>'admin'],function(){
     Route::resource('units',UnitController::class);
     Route::resource('tax',TaxController::class);
 });
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
