@@ -116,6 +116,17 @@ SellTypeController extends Controller
      */
     public function destroy(SellType $sellType)
     {
-        //
+        try{
+            $sellType->delete();
+
+            toast('You deleted sell type successfully', 'success');
+
+            return redirect()->route('sell-types.index');
+
+        }catch(\Exception $exception){
+            toast('Something error !', 'error');
+
+            return redirect()->route('sell-types.index');
+        }
     }
 }
