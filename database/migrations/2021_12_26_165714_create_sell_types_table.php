@@ -15,7 +15,7 @@ class CreateSellTypesTable extends Migration
     {
         Schema::create('sell_types', function (Blueprint $table) {
             $table->id();
-            $table->string('name',55);
+            $table->json('name');
             $table->timestamps();
         });
     }
