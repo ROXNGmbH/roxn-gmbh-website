@@ -295,7 +295,7 @@ table {
 caption {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  color: #adb5bd;
+  color: #be002c;
   text-align: left;
 }
 
@@ -2232,7 +2232,7 @@ progress {
 .form-text {
   margin-top: 0.25rem;
   font-size: 0.875em;
-  color: #adb5bd;
+  color: #be002c;
 }
 
 .form-control {
@@ -2287,22 +2287,22 @@ progress {
 }
 
 .form-control::-webkit-input-placeholder {
-  color: #adb5bd;
+  color: #be002c;
   opacity: 1;
 }
 
 .form-control:-ms-input-placeholder {
-  color: #adb5bd;
+  color: #be002c;
   opacity: 1;
 }
 
 .form-control::-ms-input-placeholder {
-  color: #adb5bd;
+  color: #be002c;
   opacity: 1;
 }
 
 .form-control::placeholder {
-  color: #adb5bd;
+  color: #be002c;
   opacity: 1;
 }
 
@@ -2757,11 +2757,11 @@ textarea.form-control-lg {
 }
 
 .form-range:disabled::-webkit-slider-thumb {
-  background-color: #adb5bd;
+  background-color: #be002c;
 }
 
 .form-range:disabled::-moz-range-thumb {
-  background-color: #adb5bd;
+  background-color: #be002c;
 }
 
 .form-floating {
@@ -4368,7 +4368,7 @@ fieldset:disabled .btn {
 }
 
 .dropdown-menu-dark .dropdown-item.disabled, .dropdown-menu-dark .dropdown-item:disabled {
-  color: #adb5bd;
+  color: #be002c;
 }
 
 .dropdown-menu-dark .dropdown-divider {
@@ -4380,7 +4380,7 @@ fieldset:disabled .btn {
 }
 
 .dropdown-menu-dark .dropdown-header {
-  color: #adb5bd;
+  color: #be002c;
 }
 
 .btn-group,
@@ -8570,7 +8570,7 @@ fieldset:disabled .btn {
 }
 
 .text-muted {
-  color: #adb5bd !important;
+  color: #be002c !important;
 }
 
 .text-black-50 {

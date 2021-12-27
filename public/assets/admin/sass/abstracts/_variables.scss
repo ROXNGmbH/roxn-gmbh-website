@@ -19,7 +19,7 @@ $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #cfdbe6 !default;
-$gray-500: #adb5bd !default;
+$gray-500: #be002c !default;
 $gray-600: #6c757d !default;
 $gray-700: #383e50 !default;
 $gray-800: #2f3446 !default;
@@ -46,8 +46,8 @@ $grays: (
 ) !default;
 // fusv-enable
 
-$brand: #3BB77E !default;
-$brand-dark: #29A56C !default;
+$brand: #be002c !default;
+$brand-dark: #EB0037 !default;
 $brand-2: #FDC040 !default;
 $blue:    #5897fb !default;
 $indigo:  #782cf1 !default;
@@ -63,7 +63,7 @@ $cyan:    #18a1b7 !default;
 // scss-docs-start colors-map
 $colors: (
   "brand":       $brand,
-  "brand-2":       $brand-2,  
+  "brand-2":       $brand-2,
   "blue":       $blue,
   "indigo":     $indigo,
   "purple":     $purple,

@@ -2,18 +2,6 @@
 
 @section('page-title','dashboard')
 
-@section('content-header')
-    <div class="content-header">
-        <div>
-            <h2 class="content-title card-title">Dashboard</h2>
-            <p>Whole data about your business here</p>
-        </div>
-        <div>
-            <a href="#" class="btn btn-primary"><i class="text-muted material-icons md-post_add"></i>Create report</a>
-        </div>
-    </div>
-@stop
-
 @section('main-content')
     <section class="content-main">
         <div class="content-header">
