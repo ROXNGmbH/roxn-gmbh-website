@@ -41,6 +41,7 @@
     <script src="{{asset('assets/admin//js/vendors/perfect-scrollbar.js')}}"></script>
     <script src="{{asset('assets/admin//js/vendors/jquery.fullscreen.min.js')}}"></script>
     <script src="{{asset('assets/admin//js/vendors/chart.js')}}"></script>
+    <script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
     <!-- Main Script -->
     <script src="{{asset('assets/admin/js/main.js?v=1.1')}}" type="text/javascript"></script>
     <script src="{{asset('assets/admin/js/custom-chart.js')}}" type="text/javascript"></script>

@@ -2,9 +2,9 @@
 
 use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\dashboard;
-
 use App\Http\Controllers\admin\DeliveryTimeController;
 use App\Http\Controllers\admin\ManufacturingCompanyController;
+use App\Http\Controllers\admin\PageController;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\admin\ProductFlagController;
 use App\Http\Controllers\Admin\SellTypeController;
@@ -40,6 +40,7 @@ Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function(){
     Route::resource('product-flags',ProductFlagController::class);
     Route::resource('manufacturing-companies',ManufacturingCompanyController::class);
     Route::resource('delivery-times',DeliveryTimeController::class);
+    Route::resource('pages',PageController::class);
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

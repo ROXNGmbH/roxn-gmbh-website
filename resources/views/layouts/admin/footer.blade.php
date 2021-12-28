@@ -4,7 +4,7 @@
             <script>
                 document.write(new Date().getFullYear());
             </script>
-            &copy; Made By Artisan Tech Selection
+            &copy; Made By Artisan Tech Solution
         </div>
         <div class="col-sm-6">
             <div class="text-sm-end">All rights reserved</div>

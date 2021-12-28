@@ -56,7 +56,7 @@
 
             <li class="menu-item">
                 <a class="menu-link" href="{{route('manufacturing-companies.index')}}">
-                    <i class="icon material-icons md-store"></i>
+                    <i class="icon material-icons md-apartment"></i>
                     <span class="text">manufacturing companies</span>
                 </a>
             </li>
@@ -76,8 +76,8 @@
             </li>
 
             <li class="menu-item">
-                <a class="menu-link" href="#">
-                    <i class="icon material-icons md-person"></i>
+                <a class="menu-link" href="{{route('pages.index')}}">
+                    <i class="icon material-icons md-layers"></i>
                     <span class="text">Pages</span>
                 </a>
             </li>
