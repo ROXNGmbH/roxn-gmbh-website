@@ -26,17 +26,16 @@ class CreateProductsTable extends Migration
             $table->integer('min_gty')->nullable();
             $table->integer('max_gty')->nullable();
             $table->integer('weight');
-            $table->json('tages')->nullable();
+            $table->json('tags')->nullable();
             $table->string('barcode',50)->nullable();
             $table->foreignId('delivery_time_id')->constrained();
             $table->foreignId('tax_id')->constrained();
             $table->foreignId('unit_id')->constrained();
             $table->foreignId('category_id')->constrained();
             $table->foreignId('sub_category_id')->constrained();
-            $table->foreignId('rate_id')->constrained();
-            $table->foreignId('manfacturing_company_id')->constrained();
+            $table->foreignId('manufacturing_company_id')->constrained();
             $table->foreignId('sell_type_id')->constrained();
-            $table->foreignId('flag_id')->constrained();
+            $table->foreignId('flag_id')->constrained('product_flags');
             $table->timestamps();
         });
     }
