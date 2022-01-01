@@ -14,23 +14,28 @@
     <form action="{{route('sell-types.update',$sellType->id)}}" method="post">
         @csrf
         @method('PUT')
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card mb-4">
-                    <div class="card-header">
-                        <h4>Information</h4>
+        <div class="card mb-4">
+            <div class="card-header">
+                <h4>Information</h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label for="name_de" class="mb-2">Name (de)</label>
+                        <input type="text" name="name_de" id="name_de" value="{{$sellType->NameAr}}"
+                               class="form-control"  placeholder="Enter sell type name de"><br>
                     </div>
-                    <div class="card-body">
-                        <div>
-                            <label for="name">Name DE</label>
-                            <input type="text" name="name_de" value="{{$sellType->NameAr}}" id="name" class="form-control"><br>
-
+                    <div class="col-lg-6">
+                        <label for="name_ar" class="mb-2">Name (ar)</label>
+                        <input type="text" name="name_ar" id="name_ar" value="{{$sellType->NameDe}}"
+                               class="form-control"  placeholder="Enter sell type name ar"><br>
+                    </div>
+                </div>
+                <div class="row align-items-end justify-content-end">
+                    <div class="col-lg-12">
+                        <div class="d-flex justify-content-end pt-2 mt-5">
+                            <button class="btn btn-primary" type="submit">Save</button>
                         </div>
-                        <div>
-                            <label for="name">Name AR</label>
-                            <input type="text" name="name_ar" value="{{$sellType->NameDe}}" id="name" class="form-control"><br>
-                        </div>
-                        <button class="btn btn-primary" type="submit">Save</button>
                     </div>
                 </div>
             </div>

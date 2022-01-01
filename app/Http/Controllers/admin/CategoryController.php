@@ -15,7 +15,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::with('media')->paginate(2, ['id', 'name', 'created_at']);
+        $categories = Category::with('media')->paginate(1, ['id', 'name', 'created_at']);
 
         return view('pages.admin.category.index', compact('categories'));
     }

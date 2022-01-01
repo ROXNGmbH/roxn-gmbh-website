@@ -2,6 +2,7 @@
 
 @section('page-title','dashboard')
 
+
 @section('main-content')
     <section class="content-main">
         <div class="content-header">

@@ -17,8 +17,7 @@ class CreateSubCategoriesTable extends Migration
             $table->id();
             $table->json('name');
             $table->boolean('status')->default(1); // 1 => active , 0 => unactive
-            $table->foreignId('category_id')->onDelete('cascade');
-            $table->timestamps();
+            $table->foreignId('category_id')->onDelete('cascade')->onUpdate('cascade');            $table->timestamps();
         });
     }
 

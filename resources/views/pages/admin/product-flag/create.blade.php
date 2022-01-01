@@ -13,23 +13,26 @@
 @section('main-content')
     <form action="{{route('product-flags.store')}}" method="post">
         @csrf
-        <div class="row ">
-            <div class="col-md-6">
-                <div class="card mb-4">
-                    <div class="card-header">
-                        <h4>Information</h4>
+        <div class="card mb-4">
+            <div class="card-header">
+                <h4>Information</h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label for="name_de" class="mb-2">Name (de)</label>
+                        <input type="text" name="name_de" id="name_de" class="form-control"  placeholder="Enter flag name de ...">
                     </div>
-                    <div class="card-body">
-                        <div>
-                            <label for="name">Name DE</label>
-                            <input type="text" name="name_de" id="name" class="form-control"><br>
-
+                    <div class="col-lg-6">
+                        <label for="name_ar" class="mb-2">Name (ar)</label>
+                        <input type="text" name="name_ar" id="name_ar" class="form-control" placeholder="Enter flag name ar ...">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="d-flex justify-content-end mt-3">
+                            <button class="btn btn-primary" type="submit">Save</button>
                         </div>
-                        <div>
-                            <label for="name">Name AR</label>
-                            <input type="text" name="name_ar" id="name" class="form-control"><br>
-                        </div>
-                        <button class="btn btn-primary" type="submit">Save</button>
                     </div>
                 </div>
             </div>
