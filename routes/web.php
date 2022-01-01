@@ -31,7 +31,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[HomeController::class,'index']);
 
 Route::group(['prefix'=>'admin'],function(){
-    Route::get('dashboard',[Dashboard::class,'index']);
+    Route::get('dashboard',[Dashboard::class,'index'])->name('dashboard');
     Route::resource('products',ProductController::class);
     Route::resource('categories',CategoryController::class);
     Route::resource('sub-categories',SubCategoryController::class);
