@@ -2287,22 +2287,22 @@ progress {
 }
 
 .form-control::-webkit-input-placeholder {
-  color: #be002c;
+  color: #4f5d77;
   opacity: 1;
 }
 
 .form-control:-ms-input-placeholder {
-  color: #be002c;
+  color: #4f5d77;
   opacity: 1;
 }
 
 .form-control::-ms-input-placeholder {
-  color: #be002c;
+  color: #4f5d77;
   opacity: 1;
 }
 
 .form-control::placeholder {
-  color: #be002c;
+  color: #4f5d77;
   opacity: 1;
 }
 
