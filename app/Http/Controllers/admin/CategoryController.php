@@ -150,7 +150,6 @@ class CategoryController extends Controller
             return redirect()->route('categories.index');
 
         } catch (\Exception $exception) {
-
             toast('Something error !', 'error');
 
             return redirect()->route('categories.index');

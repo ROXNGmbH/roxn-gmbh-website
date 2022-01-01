@@ -2,6 +2,14 @@
 
 @section('page-title','Create sub category')
 
+@section('page-head')
+    <style>
+        .card {
+            min-height: 400px;
+        }
+    </style>
+@endsection
+
 @section('content-header')
     <div class="content-header d-flex justify-content-between" style="width:100%">
         <div>
@@ -24,7 +32,7 @@
                             <div class="col-md-6">
                                 <div class="mb-4">
                                     <label for="name_ar" class="form-label">Name (ar)</label>
-                                    <input type="text" name="name_ar" placeholder="Enter category name arabic ..."
+                                    <input type="text" name="name_ar" value="{{old('name_ar')}}" placeholder="Enter category name arabic ..."
                                            class="form-control" id="name_ar">
                                     @error('name_ar')
                                     <p class="text-danger">{{$message}}</p>
@@ -34,7 +42,7 @@
                             <div class="col-md-6">
                                 <div class="mb-4">
                                     <label for="name_de" class="form-label">Name (de)</label>
-                                    <input type="text" name="name_de" placeholder="Enter category name german ..."
+                                    <input type="text" name="name_de" value="{{old('name_de')}}" placeholder="Enter category name german ..."
                                            class="form-control" id="name_de">
                                     @error('name_de')
                                     <p class="text-danger">{{$message}}</p>
@@ -44,12 +52,14 @@
                             <div class="col-md-6">
                                 <div class="mb-4">
                                     <label for="category_id" class="form-label">Category</label>
-                                    <select name="category_id" id="category_id" class="form-select form-control">
-                                        <option value="" hidden> -- select category -- </option>
-                                        @foreach($categories as $category)
-                                            <option value="{{$category->id}}">{{$category->name_ar . ' - '. $category->name_de}}</option>
-                                        @endforeach
-                                    </select>
+                                    <div>
+                                        <select name="category_id" id="category_id" class="w-100">
+                                            <option value="" hidden> -- select category -- </option>
+                                            @foreach($categories as $category)
+                                                <option value="{{$category->id}}">{{$category->name_ar . ' - '. $category->name_de}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
                                     @error('category_id')
                                     <p class="text-danger">{{$message}}</p>
                                     @enderror
@@ -58,7 +68,7 @@
                             <div class="col-md-3">
                                 <p class="mt-5">Status</p>
                                 <label class="form-check mb-3">
-                                    <input class="form-check-input" type="checkbox" name="status">
+                                    <input class="form-check-input" value="{{old('status')}}" type="checkbox" name="status">
                                     <span class="form-check-label"> Active </span>
                                 </label>
                             </div>
@@ -92,7 +102,9 @@
     </form>
 @stop
 @section('scripts')
+    <script src="{{asset('assets/admin/js/custom.select2.js')}}" type="text/javascript"></script>
     <script>
+        //image preview
         var loadFile = function(event) {
             var output = document.getElementById('image');
             output.src = URL.createObjectURL(event.target.files[0]);

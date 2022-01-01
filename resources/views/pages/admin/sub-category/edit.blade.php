@@ -66,7 +66,7 @@
                                     <span class="form-check-label"> Active </span>
                                 </label>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-12">
                                 <div class="d-flex justify-content-end pt-2 mt-5">
                                     <button class="btn btn-primary" type="submit">edit</button>
                                 </div>
@@ -95,6 +95,7 @@
     </form>
 @stop
 @section('scripts')
+    <script src="{{asset('assets/admin/js/custom.select2.js')}}" type="text/javascript"></script>
     <script>
         var loadFile = function (event) {
             var output = document.getElementById('image');

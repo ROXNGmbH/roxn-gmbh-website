@@ -24,7 +24,7 @@
                             <div class="col-md-6">
                                 <div class="mb-4">
                                     <label for="name_ar" class="form-label">Name (ar)</label>
-                                    <input type="text" name="name_ar" placeholder="Enter category name arabic ..."
+                                    <input type="text" name="name_ar" value="{{old('name_ar')}}" placeholder="Enter category name arabic ..."
                                            class="form-control" id="name_ar">
                                     @error('name_ar')
                                     <p class="text-danger">{{$message}}</p>
@@ -34,7 +34,7 @@
                             <div class="col-md-6">
                                 <div class="mb-4">
                                     <label for="name_de" class="form-label">Name (de)</label>
-                                    <input type="text" name="name_de" placeholder="Enter category name german ..."
+                                    <input type="text" name="name_de" value="{{old('name_de')}}" placeholder="Enter category name german ..."
                                            class="form-control" id="name_de">
                                     @error('name_de')
                                     <p class="text-danger">{{$message}}</p>
@@ -44,7 +44,7 @@
                             <div class="col-md-6">
                                 <p class="mt-5">Status</p>
                                 <label class="form-check mb-3">
-                                    <input class="form-check-input" type="checkbox" name="status">
+                                    <input class="form-check-input" value="{{old('status')}}" type="checkbox" name="status">
                                     <span class="form-check-label"> Active </span>
                                 </label>
                             </div>
