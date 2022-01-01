@@ -46,7 +46,7 @@
                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                          </div>
                                          <div class="modal-body">
-                                             <p>Are you sure to product flags time ?</p>
+                                             <p>Are you sure to product flags  ?</p>
                                          </div>
                                          <div class="modal-footer">
                                              <button type="button" class="btn btn-sm font-sm rounded btn-light mx-2" data-bs-dismiss="modal">Close</button>
