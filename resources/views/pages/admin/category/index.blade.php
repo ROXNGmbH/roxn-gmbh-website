@@ -32,7 +32,7 @@
                     <tr>
                         <th scope="row">{{$category->id}}</th>
                         <td>
-                            <img src="{{$category->image}}" class="img-sm img-thumbnail" alt="Item">
+                            <img src="{{$category->image}}" style="width:100px;height:100px" class="img-sm img-thumbnail" alt="Item">
                         </td>
                         <td>
                             {{$category->name_ar}}
@@ -81,5 +81,7 @@
                 </tbody>
             </table>
         </div>
-        {{$categories->links()}}
+        <div class="p-4 bg-white d-flex justify-content-center align-items-center">
+            {{$categories->links()}}
+        </div>
 @stop
