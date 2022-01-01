@@ -26,7 +26,7 @@
                                 <div class="mb-4">
                                     <label for="name_ar" class="form-label">Name (ar)</label>
                                     <input type="text" value="{{$manufacturingCompany->name_ar}}" name="name_ar"
-                                           placeholder="Enter category name arabic ..."
+                                           placeholder="Enter category name ar ..."
                                            class="form-control" id="name_ar">
                                     @error('name_ar')
                                     <p class="text-danger">{{$message}}</p>
@@ -37,15 +37,15 @@
                                 <div class="mb-4">
                                     <label for="name_de" class="form-label">Name (de)</label>
                                     <input type="text" value="{{$manufacturingCompany->name_de}}" name="name_de"
-                                           placeholder="Enter category name german ..."
+                                           placeholder="Enter category name de ..."
                                            class="form-control" id="name_de">
                                     @error('name_de')
                                     <p class="text-danger">{{$message}}</p>
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="d-flex pt-2 mt-5">
+                            <div class="col-md-12">
+                                <div class="d-flex justify-content-end pt-2 mt-5">
                                     <button class="btn btn-primary" type="submit">edit</button>
                                 </div>
                             </div>

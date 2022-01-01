@@ -12,6 +12,7 @@ use App\Http\Controllers\admin\SubCategoryController;
 use App\Http\Controllers\admin\TaxController;
 use App\Http\Controllers\admin\UnitController;
 use App\Http\Controllers\user\HomeController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,12 +25,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Auth::routes();
+//Auth::routes();
 
 
 Route::get('/',[HomeController::class,'index']);
 
-Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function(){
+Route::group(['prefix'=>'admin'],function(){
     Route::get('dashboard',[Dashboard::class,'index']);
     Route::resource('products',ProductController::class);
     Route::resource('categories',CategoryController::class);
