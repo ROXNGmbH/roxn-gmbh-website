@@ -4,8 +4,6 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Admin\ProductFlag;
-use App\Models\SellType;
-use App\Models\Unit;
 use Illuminate\Http\Request;
 
 class ProductFlagController extends Controller
