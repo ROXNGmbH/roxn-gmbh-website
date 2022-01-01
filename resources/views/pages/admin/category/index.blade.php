@@ -8,74 +8,78 @@
             <h2 class="content-title card-title">Categories</h2>
         </div>
         <div>
-            <a href="{{route('categories.create')}}" class="btn btn-primary"><i class="text-muted material-icons md-post_add"></i>Create category</a>
+            <a href="{{route('categories.create')}}" class="btn btn-primary"><i
+                    class="text-muted material-icons md-post_add"></i>Create category</a>
         </div>
     </div>
 @stop
 
 @section('main-content')
-    <div class="card mb-4">
-        <div class="card-body">
-            <article class="itemlist">
-                <div class="row align-items-center">
-                    <div class="col-lg-2 col-sm-2 col-4">
-                        #ID
-                    </div>
-                    <div class="col-lg-2 col-sm-4 col-8 flex-grow-1">
-                        Image
-                    </div>
-                    <div class="col-lg-2 col-sm-2 col-4">
-                        Name (ar)
-                    </div>
-                    <div class="col-lg-2 col-sm-2 col-4">
-                        Name (de)
-                    </div>
-                    <div class="col-lg-2 col-sm-2 col-4 col-date">
-                        Date Created
-                    </div>
-                    <div class="col-lg-2 col-sm-2 col-4 col-action text-center">
-                        Action
-                    </div>
-                </div>
-            </article>
-            @foreach($categories as $category)
-            <article class="itemlist">
-                <div class="row align-items-center">
-                    <div class="col-lg-2 col-sm-2 col-4 ">
-                        {{$category->id}}
-                    </div>
-                    <div class="col-lg-2 col-sm-4 col-8 flex-grow-1">
-                        <a class="itemside" href="#">
-                            <div class="left">
-                                <img src="{{$category->image}}" class="img-sm img-thumbnail" alt="Item">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-sm-2 col-4">
-                        {{$category->name_ar}}
-                    </div>
-                    <div class="col-lg-2 col-sm-2 col-4">
-                        {{$category->name_de}}
-                    </div>
-                    <div class="col-lg-2 col-sm-2 col-4">
-                        {{$category->created_at}}
-                    </div>
-                    <div class="col-lg-2 col-sm-2 col-4 col-action text-center d-flex justify-content-center">
-                        <a href="{{route('categories.edit',$category->id)}}" class="btn btn-sm font-sm rounded btn-brand"> <i class="material-icons md-edit"></i> Edit </a>
-                        <form action="{{route('categories.destroy',$category->id)}}" method="post">
-                            @csrf
-                            @method('delete')
-                            <button class="btn btn-sm font-sm btn-light rounded mx-2">
+        <div class="p-4 bg-white">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">#ID</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Name (ar)</th>
+                    <th scope="col">Name (de)</th>
+                    <th scope="col">Date Created</th>
+                    <th scope="col">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach($categories as $category)
+                    <tr>
+                        <th scope="row">{{$category->id}}</th>
+                        <td>
+                            <img src="{{$category->image}}" class="img-sm img-thumbnail" alt="Item">
+                        </td>
+                        <td>
+                            {{$category->name_ar}}
+                        </td>
+                        <td>
+                            {{$category->name_de}}
+                        </td>
+                        <td>
+                            {{$category->created_at}}
+                        </td>
+                        <td>
+                            <div class="d-flex">
+                            <a href="{{route('categories.edit',$category->id)}}"
+                               class="btn btn-sm font-sm rounded btn-brand mr-2"> <i class="material-icons md-edit"></i> Edit
+                            </a>
+
+                            <button type="button" class="btn btn-sm font-sm btn-light rounded mx-2" data-bs-toggle="modal" data-bs-target="#delete-{{$category->id}}">
                                 <i class="material-icons md-delete_forever"></i> Delete
                             </button>
-                        </form>
-                    </div>
-                </div>
-                <!-- row .// -->
-            </article>
-            @endforeach
+
+                            <div class="modal fade" id="delete-{{$category->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Delete Category</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Are you sure to delete category ?</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-sm font-sm rounded btn-light mx-2" data-bs-dismiss="modal">Close</button>
+                                            <form action="{{route('categories.destroy',$category->id)}}" method="post">
+                                                @csrf
+                                                @method('delete')
+                                                <button type="submit" class="btn btn-sm font-sm rounded btn-brand mr-2">Delete</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
         </div>
-        <!-- card-body end// -->
-    </div>
-    {{$categories->links()}}
+        {{$categories->links()}}
 @stop
