@@ -27,32 +27,17 @@ class CreateProductsTable extends Migration
             $table->integer('max_gty')->nullable();
             $table->integer('weight');
             $table->json('tags')->nullable();
-            $table->string('barcode', 50)->nullable();
-
+            $table->string('barcode',50)->nullable();
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade')->onUpdate('cascade');
-
             $table->unsignedBigInteger('sub_category_id');
             $table->foreign('sub_category_id')->references('id')->on('sub_categories')->onDelete('cascade')->onUpdate('cascade');
-
-            $table->unsignedBigInteger('delivery_time_id');
-            $table->foreign('delivery_time_id')->references('id')->on('delivery_times')->onDelete('cascade')->onUpdate('cascade');
-
-            $table->unsignedBigInteger('tax_id');
-            $table->foreign('tax_id')->references('id')->on('taxes')->onDelete('cascade')->onUpdate('cascade');
-
-            $table->unsignedBigInteger('unit_id');
-            $table->foreign('unit_id')->references('id')->on('units')->onDelete('cascade')->onUpdate('cascade');
-
-            $table->unsignedBigInteger('manufacturing_company_id');
-            $table->foreign('manufacturing_company_id')->references('id')->on('manufacturing_companies')->onDelete('cascade')->onUpdate('cascade');
-
-            $table->unsignedBigInteger('sell_type_id');
-            $table->foreign('sell_type_id')->references('id')->on('sell_types')->onDelete('cascade')->onUpdate('cascade');
-
-            $table->unsignedBigInteger('flag_id');
-            $table->foreign('flag_id')->references('id')->on('product_flags')->onDelete('cascade')->onUpdate('cascade');
-
+            $table->foreignId('delivery_time_id')->constrained();
+            $table->foreignId('tax_id')->constrained();
+            $table->foreignId('unit_id')->constrained();
+            $table->foreignId('manufacturing_company_id')->constrained();
+            $table->foreignId('sell_type_id')->constrained();
+            $table->foreignId('flag_id')->constrained('product_flags');
             $table->timestamps();
         });
     }
