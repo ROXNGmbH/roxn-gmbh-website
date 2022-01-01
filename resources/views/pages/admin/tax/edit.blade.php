@@ -23,8 +23,9 @@
                     <div class="card-body">
                         <label for="tax">Tax</label>
                         <input type="number" step=0.1  name="tax" value="{{$tax->tax}}" id="name" class="form-control"><br>
-                        <button class="btn btn-primary" type="submit">Save</button>
-                    </div>
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-primary" type="submit">Save</button>
+                        </div>                    </div>
                 </div>
             </div>
         </div>
