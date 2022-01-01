@@ -72,7 +72,7 @@
                                     <span class="form-check-label"> Active </span>
                                 </label>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-12">
                                 <div class="d-flex justify-content-end pt-2 mt-5">
                                     <button class="btn btn-primary" type="submit">add</button>
                                 </div>

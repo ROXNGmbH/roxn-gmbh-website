@@ -14,7 +14,7 @@
     <form action="{{route('tax.store')}}" method="post">
         @csrf
         <div class="row justify-content-center">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="card mb-4">
                     <div class="card-header">
                         <h4>Information</h4>
@@ -22,7 +22,9 @@
                     <div class="card-body">
                         <label for="tax">Tax</label>
                         <input type="number" step="0.1" min="0" name="tax" id="tax" class="form-control"><br>
-                        <button class="btn btn-primary" type="submit">Save</button>
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-primary" type="submit">Save</button>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -44,12 +44,12 @@
                         <div class="col-lg-3 col-sm-2 col-4">
                             {{$unit->created_at}}
                         </div>
-                        <div class="col-lg-3 col-sm-2 col-4 col-action text-center d-flex justify-content-between">
+                        <div class="col-lg-3 col-sm-2 col-4 col-action text-center d-flex justify-content-center">
                             <a href="{{route('units.edit',$unit->id)}}" class="btn btn-sm font-sm rounded btn-brand"> <i class="material-icons md-edit"></i> Edit </a>
                             <form action="{{route('units.destroy',$unit->id)}}" method="post">
                                 @csrf
                                 @method('delete')
-                                <button class="btn btn-sm font-sm btn-light rounded">
+                                <button class="btn btn-sm font-sm btn-light rounded mx-2">
                                     <i class="material-icons md-delete_forever"></i> Delete
                                 </button>
                             </form>
