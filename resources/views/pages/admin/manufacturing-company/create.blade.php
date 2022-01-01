@@ -24,7 +24,7 @@
                             <div class="col-md-6">
                                 <div class="mb-4">
                                     <label for="name_ar" class="form-label">Name (ar)</label>
-                                    <input type="text" name="name_ar" placeholder="Enter manufacturing company name ar ..."
+                                    <input type="text" name="name_ar"  value="{{old('name_ar')}}" placeholder="Enter manufacturing company name ar ..."
                                            class="form-control" id="name_ar">
                                     @error('name_ar')
                                     <p class="text-danger">{{$message}}</p>
@@ -34,7 +34,7 @@
                             <div class="col-md-6">
                                 <div class="mb-4">
                                     <label for="name_de" class="form-label">Name (de)</label>
-                                    <input type="text" name="name_de" placeholder="Enter manufacturing company name de ..."
+                                    <input type="text" name="name_de" value="{{old('name_de')}}" placeholder="Enter manufacturing company name de ..."
                                            class="form-control" id="name_de">
                                     @error('name_de')
                                     <p class="text-danger">{{$message}}</p>

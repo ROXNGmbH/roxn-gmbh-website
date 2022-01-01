@@ -23,12 +23,18 @@
                     <div class="col-lg-6">
                         <label for="name" class="mb-2">Name (de)</label>
                         <input type="text" name="name_de" value="{{$productFlag->NameAr}}" id="name"
-                               class="form-control"><br>
+                               class="form-control">
+                        @error('name_de')
+                        <p class="text-danger">{{$message}}</p>
+                        @enderror
                     </div>
                     <div class="col-lg-6">
                         <label for="name" class="mb-2">Name (ar)</label>
                         <input type="text" name="name_ar" value="{{$productFlag->NameDe}}" id="name"
-                               class="form-control"><br>
+                               class="form-control">
+                        @error('name_ar')
+                        <p class="text-danger">{{$message}}</p>
+                        @enderror
                     </div>
                     <div class="row">
                         <div class="col-lg-12">

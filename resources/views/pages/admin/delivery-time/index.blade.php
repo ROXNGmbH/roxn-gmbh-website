@@ -18,7 +18,7 @@
         <table class="table">
             <thead>
             <tr>
-                <th scope="col">#ID</th>
+                <th scope="col" width="33%">#ID</th>
                 <th scope="col">Time</th>
                 <th scope="col" class="text-center">Action</th>
             </tr>

@@ -21,11 +21,17 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <label for="name_de" class="mb-2">Name (de)</label>
-                        <input type="text" name="name_de" id="name_de" class="form-control" placeholder="Enter sell type name de"><br>
+                        <input type="text" name="name_de" id="name_de" value="{{old('name_de')}}" class="form-control" placeholder="Enter sell type name de"><br>
+                        @error('name_de')
+                        <p class="text-danger">{{$message}}</p>
+                        @enderror
                     </div>
                     <div class="col-lg-6">
                         <label for="name_ar" class="mb-2">Name (ar)</label>
-                        <input type="text" name="name_ar" id="name_ar" class="form-control" placeholder="Enter sell type name ar"><br>
+                        <input type="text" name="name_ar" id="name_ar"  value="{{old('name_ar')}}" class="form-control" placeholder="Enter sell type name ar"><br>
+                        @error('name_ar')
+                        <p class="text-danger">{{$message}}</p>
+                        @enderror
                     </div>
                 </div>
                 <div class="row align-items-end justify-content-end">

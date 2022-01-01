@@ -23,12 +23,18 @@
                     <div class="col-lg-6">
                         <label for="name_de" class="mb-2">Name (de)</label>
                         <input type="text" name="name_de" id="name_de" value="{{$sellType->NameAr}}"
-                               class="form-control"  placeholder="Enter sell type name de"><br>
+                               class="form-control"  placeholder="Enter sell type name de">
+                        @error('name_de')
+                        <p class="text-danger">{{$message}}</p>
+                        @enderror
                     </div>
                     <div class="col-lg-6">
                         <label for="name_ar" class="mb-2">Name (ar)</label>
                         <input type="text" name="name_ar" id="name_ar" value="{{$sellType->NameDe}}"
-                               class="form-control"  placeholder="Enter sell type name ar"><br>
+                               class="form-control"  placeholder="Enter sell type name ar">
+                        @error('name_ar')
+                        <p class="text-danger">{{$message}}</p>
+                        @enderror
                     </div>
                 </div>
                 <div class="row align-items-end justify-content-end">

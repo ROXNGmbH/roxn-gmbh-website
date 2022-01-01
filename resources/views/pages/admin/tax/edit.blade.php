@@ -21,11 +21,16 @@
                         <h4>Information</h4>
                     </div>
                     <div class="card-body">
-                        <label for="tax">Tax</label>
-                        <input type="number" step=0.1  name="tax" value="{{$tax->tax}}" id="name" class="form-control"><br>
+                        <label for="tax" class="mb-2">Tax</label>
+                        <input type="number" step=0.1 name="tax" value="{{$tax->tax}}" id="name" class="form-control"
+                               placeholder="Enter tax number ...">
+                        @error('tax')
+                        <p class="text-danger">{{$message}}</p>
+                        @enderror
                         <div class="d-flex justify-content-end">
                             <button class="btn btn-primary" type="submit">Save</button>
-                        </div>                    </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

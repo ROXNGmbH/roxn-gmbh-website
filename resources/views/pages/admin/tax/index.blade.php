@@ -18,7 +18,7 @@
         <table class="table">
             <thead>
             <tr>
-                <th scope="col">#ID</th>
+                <th scope="col" width="15%">#ID</th>
                 <th scope="col">Number tax</th>
                 <th scope="col">Date Created</th>
                 <th scope="col">Action</th>

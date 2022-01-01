@@ -56,7 +56,7 @@
                                         <select name="category_id" id="category_id" class="w-100">
                                             <option value="" hidden> -- select category -- </option>
                                             @foreach($categories as $category)
-                                                <option value="{{$category->id}}">{{$category->name_ar . ' - '. $category->name_de}}</option>
+                                                <option value="{{$category->id}}" @if($category->id == old('category_id')) selected @endif>{{$category->name_ar . ' - '. $category->name_de}}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -68,7 +68,7 @@
                             <div class="col-md-3">
                                 <p class="mt-5">Status</p>
                                 <label class="form-check mb-3">
-                                    <input class="form-check-input" value="{{old('status')}}" type="checkbox" name="status">
+                                    <input class="form-check-input"  type="checkbox" name="status">
                                     <span class="form-check-label"> Active </span>
                                 </label>
                             </div>

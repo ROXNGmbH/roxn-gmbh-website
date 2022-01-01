@@ -21,8 +21,11 @@
                         <h4>Information</h4>
                     </div>
                     <div class="card-body">
-                        <label for="name">Name</label>
-                        <input type="text" name="name" value="{{$unit->name}}" id="name" class="form-control"><br>
+                        <label for="name" class="mb-2">Name</label>
+                        <input type="text" name="name" value="{{$unit->name}}" id="name" class="form-control"  placeholder="Enter unit name ...">
+                        @error('name')
+                        <p class="text-danger">{{$message}}</p>
+                        @enderror
                         <div class="d-flex justify-content-end">
                             <button class="btn btn-primary" type="submit">Save</button>
                         </div>
