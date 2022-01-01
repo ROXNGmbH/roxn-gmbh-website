@@ -64,6 +64,14 @@
                                 <p class="text-danger">{{$message}}</p>
                                 @enderror
                             </div>
+                            <div class="col-md-6">
+                                <p class="mt-5">Status</p>
+                                <label class="form-check mb-3">
+                                    <input class="form-check-input"@if($page->status) checked @endif  type="checkbox"
+                                           name="status">
+                                    <span class="form-check-label"> Active </span>
+                                </label>
+                            </div>
                             <div class="col-12">
                                 <button class="btn btn-primary my-2" type="submit">Save</button>
                             </div>

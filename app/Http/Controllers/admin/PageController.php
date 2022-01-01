@@ -59,7 +59,8 @@ class PageController extends Controller
                 'description' => [
                     'ar' => $data['description_ar'],
                     'de' => $data['description_de']
-                ]
+                ],
+                'status' => $request->status ? 1 : 0,
             ]);
 
             toast('You Add page successfully', 'success');
@@ -127,7 +128,8 @@ class PageController extends Controller
                 'description' => [
                     'ar' => $data['description_ar'],
                     'de' => $data['description_de']
-                ]
+                ],
+                'status' => $request->status == "on" ? 1 : 0,
             ]);
 
             toast('You edit page successfully', 'success');
