@@ -7,7 +7,7 @@ use App\Http\Controllers\admin\ManufacturingCompanyController;
 use App\Http\Controllers\admin\PageController;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\admin\ProductFlagController;
-use App\Http\Controllers\Admin\SellTypeController;
+use App\Http\Controllers\admin\SellTypeController;
 use App\Http\Controllers\admin\SubCategoryController;
 use App\Http\Controllers\admin\TaxController;
 use App\Http\Controllers\admin\UnitController;

@@ -28,11 +28,13 @@ class CreateProductsTable extends Migration
             $table->integer('weight');
             $table->json('tags')->nullable();
             $table->string('barcode',50)->nullable();
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('sub_category_id');
+            $table->foreign('sub_category_id')->references('id')->on('sub_categories')->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId('delivery_time_id')->constrained();
             $table->foreignId('tax_id')->constrained();
             $table->foreignId('unit_id')->constrained();
-            $table->foreignId('category_id')->constrained();
-            $table->foreignId('sub_category_id')->constrained();
             $table->foreignId('manufacturing_company_id')->constrained();
             $table->foreignId('sell_type_id')->constrained();
             $table->foreignId('flag_id')->constrained('product_flags');
