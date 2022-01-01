@@ -22,6 +22,7 @@ class CreateSubCategoriesTable extends Migration
             $table->timestamps();
         });
     }
+
     /**
      * Reverse the migrations.
      *

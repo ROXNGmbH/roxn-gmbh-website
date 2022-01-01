@@ -14,68 +14,82 @@
 @stop
 
 @section('main-content')
-    <div class="card mb-4">
-        <div class="card-body">
-            <article class="itemlist">
-                <div class="row align-items-center">
-                    <div class="col-lg-2 col-sm-2 col-4">
-                        #ID
-                    </div>
-                    <div class="col-lg-2 col-sm-4 col-8 flex-grow-1">
-                        Image
-                    </div>
-                    <div class="col-lg-2 col-sm-2 col-4">
-                        Name (ar)
-                    </div>
-                    <div class="col-lg-2 col-sm-2 col-4">
-                        Name (de)
-                    </div>
-                    <div class="col-lg-2 col-sm-2 col-4 col-date">
-                        Date Created
-                    </div>
-                    <div class="col-lg-2 col-sm-2 col-4 col-action text-center">
-                        Action
-                    </div>
-                </div>
-            </article>
+    <div class="p-4 bg-white">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#ID</th>
+                <th scope="col">Image</th>
+                <th scope="col">Name (ar)</th>
+                <th scope="col">Name (de)</th>
+                <th scope="col">Date Created</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
+            <tbody>
             @foreach($manufacturing_companies as $company)
-                <article class="itemlist">
-                    <div class="row align-items-center">
-                        <div class="col-lg-2 col-sm-2 col-4 ">
-                            {{$company->id}}
-                        </div>
-                        <div class="col-lg-2 col-sm-4 col-8 flex-grow-1">
-                            <a class="itemside" href="#">
-                                <div class="left">
-                                    <img src="{{$company->image}}" class="img-sm img-thumbnail" alt="Item">
-                                </div>
+                <tr>
+                    <th scope="row">{{$company->id}}</th>
+                    <td>
+                        <img src="{{$company->image}}" style="width:100px;height:100px" class="img-thumbnail" alt="Item">
+                    </td>
+                    <td>
+                        {{$company->name_ar}}
+                    </td>
+                    <td>
+                        {{$company->name_de}}
+                    </td>
+                    <td>
+                        {{$company->created_at}}
+                    </td>
+                    <td>
+                        <div class="d-flex">
+                            <a href="{{route('manufacturing-companies.edit',$company->id)}}"
+                               class="btn btn-sm font-sm rounded btn-brand mr-2"> <i class="material-icons md-edit"></i>
+                                Edit
                             </a>
+
+                            <button type="button" class="btn btn-sm font-sm btn-light rounded mx-2"
+                                    data-bs-toggle="modal" data-bs-target="#delete-{{$company->id}}">
+                                <i class="material-icons md-delete_forever"></i> Delete
+                            </button>
+
+                            <div class="modal fade" id="delete-{{$company->id}}" tabindex="-1"
+                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Delete  Manufacturing Company</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Are you sure to delete manufacturing company ?</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-sm font-sm rounded btn-light mx-2"
+                                                    data-bs-dismiss="modal">Close
+                                            </button>
+                                            <form action="{{route('manufacturing-companies.destroy',$company->id)}}"
+                                                  method="post">
+                                                @csrf
+                                                @method('delete')
+                                                <button type="submit" class="btn btn-sm font-sm rounded btn-brand mr-2">
+                                                    Delete
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-lg-2 col-sm-2 col-4">
-                            {{$company->name_ar}}
-                        </div>
-                        <div class="col-lg-2 col-sm-2 col-4">
-                            {{$company->name_de}}
-                        </div>
-                        <div class="col-lg-2 col-sm-2 col-4">
-                            {{$company->created_at}}
-                        </div>
-                        <div class="col-lg-2 col-sm-2 col-4 col-action text-center d-flex">
-                            <a href="{{route('manufacturing-companies.edit',$company->id)}}" class="btn btn-sm mx-2 font-sm rounded btn-brand"> <i class="material-icons md-edit"></i> Edit </a>
-                            <form action="{{route('manufacturing-companies.destroy',$company->id)}}" method="post">
-                                @csrf
-                                @method('delete')
-                                <button class="btn btn-sm font-sm btn-light rounded">
-                                    <i class="material-icons md-delete_forever"></i> Delete
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                    <!-- row .// -->
-                </article>
+                    </td>
+                </tr>
             @endforeach
-        </div>
-        <!-- card-body end// -->
+            </tbody>
+        </table>
     </div>
-    {{$manufacturing_companies->links()}}
+    <div class="p-4 bg-white d-flex justify-content-center align-items-center">
+        {{$manufacturing_companies->links()}}
+    </div>
 @stop
