@@ -10,7 +10,7 @@ class Page extends Model
 {
     use HasFactory,HasTranslations;
 
-    protected $fillable = ['name','description','title'];
+    protected $fillable = ['name','description','title','status'];
 
     public $translatable = ['name','title','description'];
 

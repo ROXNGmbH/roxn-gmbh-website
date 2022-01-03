@@ -18,6 +18,7 @@ class CreatePagesTable extends Migration
             $table->json('name');
             $table->json('title');
             $table->json('description');
+            $table->boolean('status')->default(0);
             $table->timestamps();
         });
     }

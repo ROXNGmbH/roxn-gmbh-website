@@ -26,7 +26,7 @@ class PageController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.admin.website-pages.create');
     }
 
     /**
@@ -37,7 +37,42 @@ class PageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'name_ar' => 'required|string',
+            'name_de' => 'required|string',
+            'title_ar' => 'required|string',
+            'title_de' => 'required|string',
+            'description_ar' => 'required|string',
+            'description_de' => 'required|string'
+        ]);
+
+        try {
+            Page::create([
+                'name' => [
+                    'ar' => $data['name_ar'],
+                    'de' => $data['name_de']
+                ],
+                'title' => [
+                    'ar' => $data['title_ar'],
+                    'de' => $data['title_de']
+                ],
+                'description' => [
+                    'ar' => $data['description_ar'],
+                    'de' => $data['description_de']
+                ],
+                'status' => $request->status ? 1 : 0,
+            ]);
+
+            toast('You Add page successfully', 'success');
+
+            return redirect()->route('pages.index');
+
+        } catch (Exception $exception) {
+
+            toast('Something error !', 'error');
+
+            return redirect()->route('pages.index');
+        }
     }
 
     /**
@@ -93,7 +128,8 @@ class PageController extends Controller
                 'description' => [
                     'ar' => $data['description_ar'],
                     'de' => $data['description_de']
-                ]
+                ],
+                'status' => $request->status == "on" ? 1 : 0,
             ]);
 
             toast('You edit page successfully', 'success');
@@ -117,6 +153,18 @@ class PageController extends Controller
      */
     public function destroy(Page $page)
     {
-        //
+        try {
+            $page->delete();
+
+            toast('You delete page successfully', 'success');
+
+            return redirect()->route('pages.index');
+
+        } catch (\Exception $exception) {
+
+            toast('Something error !', 'error');
+
+            return redirect()->route('pages.index');
+        }
     }
 }
