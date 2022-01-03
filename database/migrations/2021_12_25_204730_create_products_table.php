@@ -18,6 +18,7 @@ class CreateProductsTable extends Migration
             $table->json('name');
             $table->json('description');
             $table->string('slug');
+            $table->bigInteger('no_product')->nullable();
             $table->boolean('status');
             $table->double('price');
             $table->double('purchase_price');
@@ -28,6 +29,7 @@ class CreateProductsTable extends Migration
             $table->integer('weight');
             $table->json('tags')->nullable();
             $table->string('barcode',50)->nullable();
+            $table->boolean('bio_product')->nullable();
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade')->onUpdate('cascade');
             $table->unsignedBigInteger('sub_category_id');
