@@ -16,9 +16,9 @@ class Product extends Model implements HasMedia
 
     public $translatable = ['name'];
 
-    public $appends = ['image','name_ar','name_de','description_ar','description_de'];
+    public $appends = ['image', 'name_ar', 'name_de', 'description_ar', 'description_de'];
 
-    public $hidden = ['updated_at','media','name','description'];
+    public $hidden = ['updated_at', 'media', 'name', 'description'];
 
     protected $fillable = [
         'name',
@@ -67,19 +67,28 @@ class Product extends Model implements HasMedia
         return $this->getTranslation('description', 'de');
     }
 
-    public function category(){
+    public function category()
+    {
         return $this->belongsTo(Category::class);
     }
 
-    public function subCategory(){
+    public function subCategory()
+    {
         return $this->belongsTo(Category::class);
     }
 
-    public function tax(){
+    public function tax()
+    {
         return $this->belongsTo(Tax::class);
     }
 
-    public function unit(){
+    public function unit()
+    {
         return $this->belongsTo(Unit::class);
+    }
+
+    public function country()
+    {
+        return $this->hasOne(Country::class);
     }
 }

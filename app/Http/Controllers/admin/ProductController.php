@@ -3,7 +3,17 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Admin\DeliveryTime;
+use App\Models\Admin\ManufacturingCompany;
+use App\Models\Admin\ProductFlag;
+use App\Models\Category;
+use App\Models\Country;
 use App\Models\Product;
+use App\Models\SellType;
+use App\Models\SubCategory;
+use App\Models\Tag;
+use App\Models\Tax;
+use App\Models\Unit;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -26,7 +36,17 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('pages.admin.product.create');
+        $tax = Tax::get(['id','tax']);
+        $delivery_times = DeliveryTime::get(['id','from','to','type']);
+        $categories = Category::get(['id','name']);
+        $sub_categories = SubCategory::get(['id','name']);
+        $manafacturing_companies = ManufacturingCompany::get(['id','name']);
+        $sell_types = SellType::get(['id','name']);
+        $flags = ProductFlag::get(['id','name']);
+        $unit = Unit::get(['id','name']);
+        $countries = Country::get();
+        $tags = Tag::get();
+        return view('pages.admin.product.create',get_defined_vars());
     }
 
     /**
@@ -37,7 +57,8 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return $request->all();
+
     }
 
     /**
@@ -84,5 +105,14 @@ class ProductController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function get_sub_category(Request $request){
+
+        $sub_categories = SubCategory::where('category_id',$request->category_id)->get();
+
+        return response()->json([
+           'sub_categories' => $sub_categories
+        ]);
     }
 }
