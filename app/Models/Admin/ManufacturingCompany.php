@@ -17,6 +17,10 @@ class ManufacturingCompany extends Model implements HasMedia
 
     protected $fillable = ['name'];
 
+    protected $hidden = ['media'];
+
+    public $appends = ['image','name_ar','name_de'];
+
     public function getImageAttribute()
     {
 
@@ -28,8 +32,6 @@ class ManufacturingCompany extends Model implements HasMedia
         return null;
     }
 
-
-    public $appends = ['image','name_ar','name_de'];
 
     public function getNameArAttribute(): string
     {

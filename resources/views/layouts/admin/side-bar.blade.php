@@ -114,7 +114,8 @@
                     <a href="{{route('sell-types.index')}}">Sell Types</a>
                     <a href="{{route('product-flags.index')}}">Product Flags</a>
                     <a href="{{route('delivery-times.index')}}">Delivery Times</a>
-
+                    <a href="{{route('countries.index')}}">Countries</a>
+                    <a href="{{route('tags.index')}}">Tags</a>
                 </div>
             </li>
         </ul>

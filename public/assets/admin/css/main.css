@@ -4311,5 +4311,9 @@ body.dark .dropdown-menu .dropdown-item.text-danger {
     color: #fff !important;
 }
 
-
+.select2-container--default .select2-selection--multiple{
+    height:40px;
+    border:#f4f5f9 !important;
+    background: #f4f5f9;
+}
 /*# sourceMappingURL=main.css.map */
