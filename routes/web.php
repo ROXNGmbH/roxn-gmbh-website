@@ -9,10 +9,10 @@ use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\admin\ProductFlagController;
 use App\Http\Controllers\admin\SellTypeController;
 use App\Http\Controllers\admin\SubCategoryController;
+use App\Http\Controllers\admin\SubSubCategoryController;
 use App\Http\Controllers\admin\TaxController;
 use App\Http\Controllers\admin\UnitController;
 use App\Http\Controllers\user\HomeController;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,6 +42,7 @@ Route::group(['prefix'=>'admin'],function(){
     Route::resource('manufacturing-companies',ManufacturingCompanyController::class);
     Route::resource('delivery-times',DeliveryTimeController::class);
     Route::resource('pages',PageController::class);
+    Route::resource('sub-sub-categories',SubSubCategoryController::class);
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

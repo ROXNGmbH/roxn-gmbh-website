@@ -111,7 +111,7 @@ class SubCategoryController extends Controller
             'name_ar' => 'required|string',
             'name_de' => 'required|string',
             'category_id' => 'required',
-            'image' => 'image|mimes:jpg,png,jpeg|max:2048',
+            'image' => 'sometimes|image|mimes:jpg,png,jpeg|max:2048',
         ]);
 
         try {

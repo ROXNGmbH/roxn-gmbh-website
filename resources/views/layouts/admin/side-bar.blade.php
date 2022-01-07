@@ -33,6 +33,12 @@
                     <span class="text">Sub Category</span>
                 </a>
             </li>
+            <li class="menu-item {{ Request::is('admin/sub-sub-categories*') ? 'active' : '' }}">
+                <a class="menu-link" href="{{route('sub-sub-categories.index')}}">
+                    <i class="icon material-icons md-category"></i>
+                    <span class="text">Sub Sub Category</span>
+                </a>
+            </li>
             <li class="menu-item {{ Request::is('admin/products*') ? 'active' : '' }}">
                 <a class="menu-link" href="{{route('products.index')}}">
                     <i class="icon material-icons md-shopping_bag"></i>

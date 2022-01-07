@@ -11,6 +11,9 @@
     <!-- Template CSS -->
     <link href="{{asset('assets/admin/css/main.css?v=1.1')}}" rel="stylesheet" type="text/css"/>
     <link href="{{asset('assets/admin/css/vendors/nice-select.css')}}" rel="stylesheet" type="text/css"/>
+    <!-- Mix Webpack js file -->
+    <script src="{{asset('js/app.js')}}"></script>
+
     @yield('page-head')
 </head>
 <body>

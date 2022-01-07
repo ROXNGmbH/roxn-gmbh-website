@@ -42,7 +42,7 @@ class CategoryController extends Controller
             'name_ar' => 'required|string',
             'name_de' => 'required|string',
             'status' => 'sometimes',
-            'image' => 'required|image|mimes:jpg,png,jpeg|max:2048',
+            'image' => 'sometimes|image|mimes:jpg,png,jpeg|max:2048',
         ]);
 
         try {
