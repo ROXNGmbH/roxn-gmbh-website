@@ -66,7 +66,12 @@
                     <span class="text">manufacturing companies</span>
                 </a>
             </li>
-
+            <li class="menu-item {{ Request::is('admin/customers*') ? 'active' : '' }}">
+                <a class="menu-link" href="{{route('customers.index')}}">
+                    <i class="icon material-icons md-groups"></i>
+                    <span class="text">Customers</span>
+                </a>
+            </li>
             <li class="menu-item {{ Request::is('admin/reviews*') ? 'active' : '' }}">
                 <a class="menu-link" href="page-reviews.html">
                     <i class="icon material-icons md-comment"></i>
