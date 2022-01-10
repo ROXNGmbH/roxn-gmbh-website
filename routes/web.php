@@ -1,13 +1,16 @@
 <?php
 
 use App\Http\Controllers\admin\CategoryController;
+use App\Http\Controllers\admin\CountryController;
 use App\Http\Controllers\admin\CustomersController;
 use App\Http\Controllers\admin\dashboard;
 use App\Http\Controllers\admin\DeliveryTimeController;
 use App\Http\Controllers\admin\ManufacturingCompanyController;
+use App\Http\Controllers\admin\OfferCodeController;
 use App\Http\Controllers\admin\PageController;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\admin\ProductFlagController;
+use App\Http\Controllers\admin\PromoCodeController;
 use App\Http\Controllers\admin\SellTypeController;
 use App\Http\Controllers\admin\SubCategoryController;
 use App\Http\Controllers\admin\TagController;
@@ -49,8 +52,11 @@ Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function(){
     Route::resource('countries',CountryController::class);
     Route::resource('tags',TagController::class);
     Route::resource('customers',CustomersController::class);
+    Route::resource('promo-codes',PromoCodeController::class);
 
     Route::get('get-sub-category',[ProductController::class,'get_sub_category'])->name('get-sub-category');
+
+    Route::post('projects/media', [ProductController::class ,'storeMedia'])->name('projects.storeMedia');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
