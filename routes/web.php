@@ -48,6 +48,8 @@ Route::group(['prefix'=>'admin'],function(){
     Route::resource('tags',TagController::class);
 
     Route::get('get-sub-category',[ProductController::class,'get_sub_category'])->name('get-sub-category');
+
+    Route::post('projects/media', [ProductController::class ,'storeMedia'])->name('projects.storeMedia');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

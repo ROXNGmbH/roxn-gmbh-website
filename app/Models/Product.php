@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\Translatable\HasTranslations;
 
 class Product extends Model implements HasMedia
@@ -14,9 +15,9 @@ class Product extends Model implements HasMedia
 
     protected $table = "products";
 
-    public $translatable = ['name'];
+    public $translatable = ['name','description','slug'];
 
-    public $appends = ['image', 'name_ar', 'name_de', 'description_ar', 'description_de'];
+    public $appends = ['images', 'name_ar', 'name_de', 'description_ar', 'description_de'];
 
     public $hidden = ['updated_at', 'media', 'name', 'description'];
 
@@ -28,7 +29,7 @@ class Product extends Model implements HasMedia
         'price',
         'purchase_price',
         'offer_price',
-        'gty',
+        'qty',
         'min_gty',
         'max_gty',
         'weight',
@@ -39,12 +40,29 @@ class Product extends Model implements HasMedia
         'unit_id',
         'category_id',
         'sub_category_id',
-        'rate_id',
-        'manfacturing_company_id',
+        'manufacturing_company_id',
         'sell_type_id',
         'flag_id',
         'created_at',
+        'no_product',
+        'country_id',
+        'tags',
+        'bro_product',
     ];
+
+    public function getImagesAttribute(){
+
+        $images  = $this->getMedia('product');
+        if($images){
+            $photo = [];
+            foreach($images as $key => $image){
+                $photo[] =  $image->getUrl();
+            }
+            return $photo;
+        }
+
+        return null;
+    }
 
 
     public function getNameArAttribute(): string

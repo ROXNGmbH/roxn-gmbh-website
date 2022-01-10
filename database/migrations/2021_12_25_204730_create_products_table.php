@@ -23,13 +23,13 @@ class CreateProductsTable extends Migration
             $table->double('price');
             $table->double('purchase_price');
             $table->double('offer_price')->nullable();
-            $table->integer('gty');
+            $table->integer('qty');
             $table->integer('min_gty')->nullable();
             $table->integer('max_gty')->nullable();
             $table->integer('weight');
             $table->json('tags')->nullable();
             $table->string('barcode',50)->nullable();
-            $table->boolean('bio_product')->nullable();
+            $table->boolean('bro_product')->nullable();
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade')->onUpdate('cascade');
             $table->unsignedBigInteger('sub_category_id');
@@ -40,6 +40,7 @@ class CreateProductsTable extends Migration
             $table->foreignId('manufacturing_company_id')->constrained();
             $table->foreignId('sell_type_id')->constrained();
             $table->foreignId('flag_id')->constrained('product_flags');
+            $table->foreignId('country_id')->constrained();
             $table->timestamps();
         });
     }
