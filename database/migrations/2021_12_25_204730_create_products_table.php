@@ -24,8 +24,8 @@ class CreateProductsTable extends Migration
             $table->double('purchase_price');
             $table->double('offer_price')->nullable();
             $table->integer('qty');
-            $table->integer('min_gty')->nullable();
-            $table->integer('max_gty')->nullable();
+            $table->integer('min_qty')->nullable();
+            $table->integer('max_qty')->nullable();
             $table->integer('weight');
             $table->json('tags')->nullable();
             $table->string('barcode',50)->nullable();

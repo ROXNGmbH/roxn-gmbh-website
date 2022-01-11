@@ -30,8 +30,8 @@ class Product extends Model implements HasMedia
         'purchase_price',
         'offer_price',
         'qty',
-        'min_gty',
-        'max_gty',
+        'min_qty',
+        'max_qty',
         'weight',
         'tages',
         'barcode',
@@ -56,7 +56,8 @@ class Product extends Model implements HasMedia
         if($images){
             $photo = [];
             foreach($images as $key => $image){
-                $photo[] =  $image->getUrl();
+                $photo[$key]['url'] =  $image->getUrl();
+                $photo[$key]['id'] = $image->id;
             }
             return $photo;
         }

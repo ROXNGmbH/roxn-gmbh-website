@@ -47,7 +47,7 @@
                         <div class="col-lg-2 col-sm-4 col-8 flex-grow-1">
                             <a class="itemside" href="#">
                                 <div class="left">
-                                    <img src="{{$product->image}}" class="img-sm img-thumbnail" alt="Item">
+{{--                                    <img src="{{$product->images[0]}}" class="img-sm img-thumbnail" alt="Item">--}}
                                 </div>
                             </a>
                         </div>

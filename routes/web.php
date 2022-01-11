@@ -50,6 +50,8 @@ Route::group(['prefix'=>'admin'],function(){
     Route::get('get-sub-category',[ProductController::class,'get_sub_category'])->name('get-sub-category');
 
     Route::post('projects/media', [ProductController::class ,'storeMedia'])->name('projects.storeMedia');
+
+    Route::post('delete_image',[ProductController::class,'delete_image'])->name('delete_image');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

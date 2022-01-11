@@ -277,7 +277,7 @@
 
                     <div class="col-4">
                         <label for="tag_id" class="mb-2 pt-4">Tags</label>
-                        <select name="tag_id" id="tag_id" class="form-control search-form" multiple>
+                        <select name="tag_id[]" id="tag_id" class="form-control search-form" multiple="multiple">
                             @foreach($tags as $tag)
                                 <option value="{{$tag->id}}">{{$tag->name_ar . ' - ' . $tag->name_de}}</option>
                             @endforeach
