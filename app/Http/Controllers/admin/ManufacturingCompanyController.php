@@ -107,7 +107,7 @@ class ManufacturingCompanyController extends Controller
         $data = $request->validate([
             'name_ar' => 'required|string',
             'name_de' => 'required|string',
-            'image' => 'image|mimes:jpg,png,jpeg|max:2048',
+            'image' => 'sometimes|image|mimes:jpg,png,jpeg|max:2048',
         ]);
 
         try {

@@ -2,15 +2,19 @@
 
 use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\CountryController;
+use App\Http\Controllers\admin\CustomersController;
 use App\Http\Controllers\admin\dashboard;
 use App\Http\Controllers\admin\DeliveryTimeController;
 use App\Http\Controllers\admin\ManufacturingCompanyController;
+use App\Http\Controllers\admin\OfferCodeController;
 use App\Http\Controllers\admin\PageController;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\admin\ProductFlagController;
+use App\Http\Controllers\admin\PromoCodeController;
 use App\Http\Controllers\admin\SellTypeController;
 use App\Http\Controllers\admin\SubCategoryController;
 use App\Http\Controllers\admin\TagController;
+use App\Http\Controllers\admin\SubSubCategoryController;
 use App\Http\Controllers\admin\TaxController;
 use App\Http\Controllers\admin\UnitController;
 use App\Http\Controllers\user\HomeController;
@@ -48,10 +52,6 @@ Route::group(['prefix'=>'admin'],function(){
     Route::resource('tags',TagController::class);
 
     Route::get('get-sub-category',[ProductController::class,'get_sub_category'])->name('get-sub-category');
-
-    Route::post('projects/media', [ProductController::class ,'storeMedia'])->name('projects.storeMedia');
-
-    Route::post('delete_image',[ProductController::class,'delete_image'])->name('delete_image');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

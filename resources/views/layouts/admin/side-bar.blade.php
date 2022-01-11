@@ -33,6 +33,12 @@
                     <span class="text">Sub Category</span>
                 </a>
             </li>
+            <li class="menu-item {{ Request::is('admin/sub-sub-categories*') ? 'active' : '' }}">
+                <a class="menu-link" href="{{route('sub-sub-categories.index')}}">
+                    <i class="icon material-icons md-category"></i>
+                    <span class="text">Sub Sub Category</span>
+                </a>
+            </li>
             <li class="menu-item {{ Request::is('admin/products*') ? 'active' : '' }}">
                 <a class="menu-link" href="{{route('products.index')}}">
                     <i class="icon material-icons md-shopping_bag"></i>
@@ -58,6 +64,19 @@
                 <a class="menu-link" href="{{route('manufacturing-companies.index')}}">
                     <i class="icon material-icons md-apartment"></i>
                     <span class="text">manufacturing companies</span>
+                </a>
+            </li>
+
+            <li class="menu-item {{ Request::is('admin/promo-codes*') ? 'active' : '' }}">
+                <a class="menu-link" href="{{route('promo-codes.index')}}">
+                    <i class="icon material-icons md-monetization_on"></i>
+                    <span class="text">Promo Codes</span>
+                </a>
+            </li>
+            <li class="menu-item {{ Request::is('admin/customers*') ? 'active' : '' }}">
+                <a class="menu-link" href="{{route('customers.index')}}">
+                    <i class="icon material-icons md-groups"></i>
+                    <span class="text">Customers</span>
                 </a>
             </li>
 
