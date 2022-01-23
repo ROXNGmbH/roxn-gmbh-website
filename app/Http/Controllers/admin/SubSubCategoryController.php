@@ -30,7 +30,8 @@ class SubSubCategoryController extends Controller
      */
     public function create()
     {
-        $categories = Category::where('status',1)->get(['id','name']);
+        $categories = Category::where('status',0)->get(['id','name']);
+
 
         return view('pages.admin.sub-sub-category.create',compact('categories'));
     }

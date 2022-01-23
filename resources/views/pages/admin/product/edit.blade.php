@@ -274,6 +274,20 @@
                     </div>
 
                     <div class="col-4">
+                        <label for="sub_sub_category_id" class="mb-2 pt-4">Sub Sub Category</label>
+                        <select name="sub_sub_category_id" id="sub_sub_category_id" class="form-control search-form">
+                            <option value="" hidden>-- select sub sub category --</option>
+                            @foreach($sub_sub_categories as $category)
+                                <option value="{{$category->id}}"
+                                        @if($product->sub_sub_category_id == $category->id) selected @endif>{{$category->name_ar}}</option>
+                            @endforeach
+                        </select>
+                        @error('sub_sub_category_id')
+                        <p class="text-danger">{{$message}}</p>
+                        @enderror
+                    </div>
+
+                    <div class="col-4">
                         <label for="country_id" class="mb-2 pt-4">Country</label>
                         <select name="country_id" id="country_id" class="form-control search-form">
                             <option value="" hidden>-- select country --</option>
@@ -412,6 +426,29 @@
                     });
 
                     $('#sub_category_id').html(html);
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        });
+
+        // get sub sub category by sub category
+        $('#sub_category_id').on('change', function (e) {
+            e.preventDefault();
+            var sub_category_id = $(this).val();
+            $.ajax({
+                url: "{{route('get-sub-sub-category')}}",
+                data: {sub_category_id: sub_category_id, '_token': '{{csrf_token()}}'},
+                success: function (response) {
+
+                    $('#sub_sub_category_id').html('');
+                    let html = `<option value="" selected hidden>-- select sub sub category --</option>`;
+                    $.each(response.sub_sub_categories, function (key, value) {
+                        html += `<option value="${value.id}">${value.name_ar + ' - ' + value.name_de}</option>`
+                    });
+
+                    $('#sub_sub_category_id').html(html);
                 },
                 error: function (error) {
                     console.log(error);

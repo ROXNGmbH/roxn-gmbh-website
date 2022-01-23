@@ -25,7 +25,7 @@ class SubCategoryApiController extends Controller
      */
     public function getSubCategoryByCategory($category_id) :object
     {
-        $sub_categories = SubCategory::where(['category_id'=>$category_id,'status'=>1])->get(['id','name']);
+        $sub_categories = SubCategory::where(['category_id'=>$category_id,'status'=>0])->get(['id','name']);
 
         return response()->json([
             'sub_categories' => $sub_categories
