@@ -50,8 +50,17 @@ Route::group(['prefix'=>'admin'],function(){
     Route::resource('pages',PageController::class);
     Route::resource('countries',CountryController::class);
     Route::resource('tags',TagController::class);
+    Route::resource('sub-sub-categories',SubSubCategoryController::class);
+    Route::resource('customers',CustomersController::class);
+    Route::resource('promo-codes',PromoCodeController::class);
 
     Route::get('get-sub-category',[ProductController::class,'get_sub_category'])->name('get-sub-category');
+    Route::get('get-sub-sub-category',[ProductController::class,'get_sub_sub_category'])->name('get-sub-sub-category');
+
+    Route::post('projects/media', [ProductController::class ,'storeMedia'])->name('projects.storeMedia');
+
+    Route::post('delete_image',[ProductController::class,'delete_image'])->name('delete_image');
+
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

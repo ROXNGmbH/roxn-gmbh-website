@@ -40,6 +40,7 @@ class Product extends Model implements HasMedia
         'unit_id',
         'category_id',
         'sub_category_id',
+        'sub_sub_category_id',
         'manufacturing_company_id',
         'sell_type_id',
         'flag_id',

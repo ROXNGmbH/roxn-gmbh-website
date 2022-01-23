@@ -28,12 +28,11 @@ class CreateProductsTable extends Migration
             $table->integer('max_qty')->nullable();
             $table->integer('weight');
             $table->json('tags')->nullable();
-            $table->string('barcode',50)->nullable();
+            $table->string('barcode', 50)->nullable();
             $table->boolean('bro_product')->nullable();
             $table->unsignedBigInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade')->onUpdate('cascade');
             $table->unsignedBigInteger('sub_category_id');
-            $table->foreign('sub_category_id')->references('id')->on('sub_categories')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('sub_sub_category_id');
             $table->foreignId('delivery_time_id')->constrained();
             $table->foreignId('tax_id')->constrained();
             $table->foreignId('unit_id')->constrained();
@@ -42,6 +41,25 @@ class CreateProductsTable extends Migration
             $table->foreignId('flag_id')->constrained('product_flags');
             $table->foreignId('country_id')->constrained();
             $table->timestamps();
+
+            $table->foreign('category_id')
+                ->references('id')
+                ->on('categories')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
+
+            $table->foreign('sub_category_id')
+                ->references('id')
+                ->on('sub_categories')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
+
+            $table->foreign('sub_sub_category_id')
+                ->references('id')
+                ->on('sub_sub_categories')
+                ->onDelete('cascade')
+                ->onUpdate('cascade')->nullable();
+
         });
     }
 

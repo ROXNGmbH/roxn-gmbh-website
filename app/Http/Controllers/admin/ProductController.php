@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Admin\DeliveryTime;
 use App\Models\Admin\ManufacturingCompany;
 use App\Models\Admin\ProductFlag;
+use App\Models\admin\SubSubCategory;
 use App\Models\Category;
 use App\Models\Country;
 use App\Models\Product;
@@ -87,6 +88,7 @@ class ProductController extends Controller
             'tag_id' => 'sometimes',
             'status' => 'sometimes',
             'bro_product' => 'sometimes',
+            'sub_sub_category_id' =>'sometimes'
         ]);
 
         try {
@@ -124,6 +126,7 @@ class ProductController extends Controller
                 'country_id' => $data['country_id'],
                 'tags' => json_encode($data['tag_id']),
                 'bro_product' => $data['bro_product'] == "on" ? 1 : 0,
+                'sub_sub_category_id' => $data['sub_sub_category_id']
             ]);
 
             foreach ($request->input('document', []) as $file) {
@@ -167,6 +170,7 @@ class ProductController extends Controller
         $delivery_times = DeliveryTime::get(['id', 'from', 'to', 'type']);
         $categories = Category::get(['id', 'name']);
         $sub_categories = SubCategory::get(['id', 'name']);
+        $sub_sub_categories = SubSubCategory::get(['id', 'name']);
         $manafacturing_companies = ManufacturingCompany::get(['id', 'name']);
         $sell_types = SellType::get(['id', 'name']);
         $flags = ProductFlag::get(['id', 'name']);
@@ -212,6 +216,7 @@ class ProductController extends Controller
             'sub_category_id' => 'required|numeric',
             'country_id' => 'required|numeric',
             'tag_id' => 'sometimes',
+            'sub_sub_category_id' => 'sometimes'
 
         ]);
 
@@ -250,6 +255,7 @@ class ProductController extends Controller
                 'country_id' => $data['country_id'],
                 'tags' => json_encode($data['tag_id']),
                 'bro_product' => $request->bro_product == "on" ? 1 : 0,
+                'sub_sub_category_id' => $data['sub_sub_category_id']
             ]);
 
             foreach ($request->input('document', []) as $file) {
@@ -297,6 +303,16 @@ class ProductController extends Controller
         return response()->json([
             'sub_categories' => $sub_categories
         ]);
+    }
+
+    public function get_sub_sub_category(Request $request){
+
+        $sub_sub_categories = SubSubCategory::where('sub_category_id', $request->sub_category_id)->get();
+
+        return response()->json([
+            'sub_sub_categories' => $sub_sub_categories
+        ]);
+
     }
 
     public function storeMedia(Request $request)
