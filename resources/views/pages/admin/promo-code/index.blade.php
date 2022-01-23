@@ -20,7 +20,11 @@
             <tr>
                 <th scope="col">#ID</th>
                 <th scope="col">Code</th>
+                <th scope="col">Valid Price</th>
+                <th scope="col">Use Number</th>
                 <th scope="col">Value</th>
+                <th scope="col">from</th>
+                <th scope="col">to</th>
                 <th class="text-center" scope="col">Action</th>
             </tr>
             </thead>
@@ -32,11 +36,23 @@
                         {{$code->code}}
                     </td>
                     <td>
+                        {{$code->valid_price}}
+                    </td>
+                    <td>
+                        {{$code->use_number}}
+                    </td>
+                    <td>
                         @if($code->type == 'fixed')
                             {{$code->fixed_value}}
                         @elseif($code->type == 'percentage')
                             {{$code->percentage_value}}%
                         @endif
+                    </td>
+                    <td>
+                        {{$code->from}}
+                    </td>
+                    <td>
+                        {{$code->to}}
                     </td>
                     <td>
                         <div class="d-flex justify-content-center">

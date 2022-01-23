@@ -19,6 +19,10 @@ class CreatePromoCodesTable extends Migration
             $table->string('type');
             $table->float('percentage_value')->nullable();
             $table->float('fixed_value')->nullable();
+            $table->float('valid_price');
+            $table->integer('use_number');
+            $table->date('from');
+            $table->date('to');
             $table->boolean('status'); // 1:active 0:inactive
             $table->timestamps();
         });

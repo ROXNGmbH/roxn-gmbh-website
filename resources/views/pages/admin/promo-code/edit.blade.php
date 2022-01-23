@@ -56,6 +56,34 @@
                         <p class="text-danger">{{$message}}</p>
                         @enderror
                     </div>
+                    <div class="col-lg-6">
+                        <label for="valid_price" class="mb-2">Valid Use Price </label>
+                        <input type="text" value="{{$code->valid_price}}" name="valid_price" id="valid_price" class="form-control" ><br>
+                        @error('valid_price')
+                        <p class="text-danger">{{$message}}</p>
+                        @enderror
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="use_number" class="mb-2">Total Use Number </label>
+                        <input type="text" value="{{$code->use_number}}" name="use_number" id="use_number" class="form-control" ><br>
+                        @error('use_number')
+                        <p class="text-danger">{{$message}}</p>
+                        @enderror
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="from" class="mb-2">Active From</label>
+                        <input type="date" value="{{$code->from}}" name="from" id="from" class="form-control" ><br>
+                        @error('from')
+                        <p class="text-danger">{{$message}}</p>
+                        @enderror
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="to" class="mb-2">Active To</label>
+                        <input type="date" value="{{$code->to}}" name="to" id="to" class="form-control" ><br>
+                        @error('from')
+                        <p class="text-danger">{{$message}}</p>
+                        @enderror
+                    </div>
                     <div class="col-md-6">
                         <p class="mt-5">Status</p>
                         <label class="form-check mb-3">

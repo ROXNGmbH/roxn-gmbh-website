@@ -43,13 +43,21 @@ class PromoCodeController extends Controller
             'code' => 'required|unique:promo_codes',
             'value_fixed' => 'sometimes|nullable',
             'value_percentage' => 'sometimes|nullable',
-            'type' => 'sometimes',
+            'type' => 'required',
+            'valid_price' => 'required',
+            'use_number' => 'required',
+            'from' => 'required',
+            'to' => 'required',
             'status' => 'required'
         ]);
 
         try {
              PromoCode::create([
                 'code' => $data['code'],
+                'valid_price' => $data['valid_price'],
+                'use_number' => $data['use_number'],
+                'from' => $data['from'],
+                'to' => $data['to'],
                 'type' =>$data['type'],
                 'percentage_value' => $data['value_percentage'],
                 'fixed_value' => $data['value_fixed'],
@@ -107,6 +115,10 @@ class PromoCodeController extends Controller
             'value_fixed' => 'sometimes|nullable',
             'value_percentage' => 'sometimes|nullable',
             'type' => 'sometimes',
+            'valid_price' => 'required',
+            'use_number' => 'required',
+            'from' => 'required',
+            'to' => 'required',
             'status' => 'required'
         ]);
 
@@ -114,6 +126,10 @@ class PromoCodeController extends Controller
             $promoCode->update([
                 'code' => $data['code'],
                 'type' =>$data['type'],
+                'valid_price' => $data['valid_price'],
+                'use_number' => $data['use_number'],
+                'from' => $data['from'],
+                'to' => $data['to'],
                 'percentage_value' => $data['value_percentage'],
                 'fixed_value' => $data['value_fixed'],
                 'status' => $data['status'] == "on" ? 1 : 0,
