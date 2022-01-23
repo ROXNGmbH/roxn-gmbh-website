@@ -17,6 +17,13 @@
             <div class="card-header">
                 <h4>Information</h4>
             </div>
+
+            @if($errors->any())
+                @foreach ($errors->all() as $error)
+                    <div class="alert alert-danger">{{$error}}</div>
+                @endforeach
+            @endif
+
             <div class="card-body">
                 <div class="row">
                     <div class="col-lg-6">
@@ -65,7 +72,7 @@
 
                     <div class="col-4">
                         <label for="name_ar" class="mb-2">Price</label>
-                        <input type="number" name="price" step="0.1" id="price" value="{{old('price')}}"
+                        <input type="text" name="price"  id="price" value="{{old('price')}}"
                                class="form-control"><br>
                         @error('price')
                         <p class="text-danger">{{$message}}</p>
@@ -74,7 +81,7 @@
 
                     <div class="col-4">
                         <label for="name_ar" class="mb-2">Price with Tax</label>
-                        <input type="number" name="price_with_tax" step="0.1" id="price_with_tax"
+                        <input type="text" name="price_with_tax"  id="price_with_tax"
                                value="{{old('price_with_tax')}}" class="form-control"><br>
                         @error('price_with_tax')
                         <p class="text-danger">{{$message}}</p>
@@ -83,7 +90,7 @@
 
                     <div class="col-4">
                         <label for="purchase_price" class="mb-2">Purchase Price</label>
-                        <input type="number" name="purchase_price" step="0.1" id="purchase_price"
+                        <input type="text" name="purchase_price"  id="purchase_price"
                                value="{{old('purchase_price')}}" class="form-control"><br>
                         @error('purchase_price')
                         <p class="text-danger">{{$message}}</p>
@@ -92,7 +99,7 @@
 
                     <div class="col-4">
                         <label for="purchase_price_with_tax" class="mb-2">Purchase Price with Tax</label>
-                        <input type="number" name="purchase_price_with_tax" step="0.1" id="purchase_price_with_tax"
+                        <input type="text" name="purchase_price_with_tax" id="purchase_price_with_tax"
                                value="{{old('purchase_price_with_tax')}}" class="form-control"><br>
                         @error('purchase_price_with_tax')
                         <p class="text-danger">{{$message}}</p>
@@ -101,7 +108,7 @@
 
                     <div class="col-4">
                         <label for="offer_price" class="mb-2">Offer Price</label>
-                        <input type="number" name="offer_price" step="0.1" id="offer_price"
+                        <input type="text" name="offer_price" id="offer_price"
                                value="{{old('offer_price')}}" class="form-control"><br>
                         @error('offer_price')
                         <p class="text-danger">{{$message}}</p>
@@ -110,7 +117,7 @@
 
                     <div class="col-4">
                         <label for="qty" class="mb-2">Qty</label>
-                        <input type="number" name="qty" id="qty" value="{{old('qty')}}" class="form-control"><br>
+                        <input type="text" name="qty" id="qty" value="{{old('qty')}}" class="form-control"><br>
                         @error('qty')
                         <p class="text-danger">{{$message}}</p>
                         @enderror
@@ -118,7 +125,7 @@
 
                     <div class="col-4">
                         <label for="min_qty" class="mb-2">Min Qty</label>
-                        <input type="number" name="min_qty" id="min_qty" value="{{old('min_qty')}}"
+                        <input type="text" name="min_qty" id="min_qty" value="{{old('min_qty')}}"
                                class="form-control"><br>
                         @error('min_qty')
                         <p class="text-danger">{{$message}}</p>
@@ -127,7 +134,7 @@
 
                     <div class="col-4">
                         <label for="max_qty" class="mb-2">Min Qty</label>
-                        <input type="number" name="max_qty" id="max_qty" value="{{old('max_qty')}}"
+                        <input type="text" name="max_qty" id="max_qty" value="{{old('max_qty')}}"
                                class="form-control"><br>
                         @error('max_qty')
                         <p class="text-danger">{{$message}}</p>
@@ -136,7 +143,7 @@
 
                     <div class="col-4">
                         <label for="no_product" class="mb-2">No Product</label>
-                        <input type="number" name="no_product" id="no_product" value="{{old('no_product')}}"
+                        <input type="text" name="no_product" id="no_product" value="{{old('no_product')}}"
                                class="form-control"><br>
                         @error('no_product')
                         <p class="text-danger">{{$message}}</p>
@@ -154,7 +161,7 @@
 
                     <div class="col-4">
                         <label for="weight" class="mb-2">Weight</label>
-                        <input type="number" step="0.1" name="weight" id="weight" value="{{old('weight')}}"
+                        <input type="text"  name="weight" id="weight" value="{{old('weight')}}"
                                class="form-control"><br>
                         @error('weight')
                         <p class="text-danger">{{$message}}</p>
@@ -176,17 +183,17 @@
                     </div>
 
                     <div class="col-4">
-                        <label for="manafacturing_company_id" class="mb-2">Manafacturing Company</label>
-                        <select name="manafacturing_company_id" id="manafacturing_company_id"
+                        <label for="manufacturing_company_id" class="mb-2">Manafacturing Company</label>
+                        <select name="manufacturing_company_id" id="manufacturing_company_id"
                                 class="form-control search-form">
                             <option value="" hidden>-- select manafacturing company --</option>
                             @foreach($manafacturing_companies as $manafacturing_company)
                                 <option value="{{$manafacturing_company->id}}"
-                                        @if(old('manafacturing_company_id') == $manafacturing_company->id) selected @endif>
+                                        @if(old('manufacturing_company_id') == $manafacturing_company->id) selected @endif>
                                     {{$manafacturing_company->name_ar . ' - ' . $manafacturing_company->name_de}}</option>
                             @endforeach
                         </select>
-                        @error('manafacturing_company_id')
+                        @error('manufacturing_company_id')
                         <p class="text-danger">{{$message}}</p>
                         @enderror
                     </div>
@@ -270,7 +277,7 @@
 
                     <div class="col-4">
                         <label for="tag_id" class="mb-2 pt-4">Tags</label>
-                        <select name="tag_id" id="tag_id" class="form-control search-form" multiple>
+                        <select name="tag_id[]" id="tag_id" class="form-control search-form" multiple="multiple">
                             @foreach($tags as $tag)
                                 <option value="{{$tag->id}}">{{$tag->name_ar . ' - ' . $tag->name_de}}</option>
                             @endforeach
@@ -287,6 +294,15 @@
                         <label class="mb-2 pt-4">Bro Product</label><br>
                         <label for="bro_product"><img  src="{{asset('assets/admin/imgs/bro-product/bro-product.jpg')}}" style="width: 50px;height:50px" alt="bro-product"></label>
                         <input type="checkbox" name="bro_product" id="bro_product">
+                    </div>
+
+
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="document">Documents</label>
+                            <div class="needsclick dropzone" id="document-dropzone">
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -362,5 +378,42 @@
         $("#tag_id").select2({
             placeholder : "   -- select tags --",
         });
+
+        var uploadedDocumentMap = {}
+        Dropzone.options.documentDropzone = {
+            url: '{{ route('projects.storeMedia') }}',
+            maxFilesize: 2, // MB
+            addRemoveLinks: true,
+            headers: {
+                'X-CSRF-TOKEN': "{{ csrf_token() }}"
+            },
+            success: function (file, response) {
+                $('form').append('<input type="hidden" name="document[]" value="' + response.name + '">')
+                uploadedDocumentMap[file.name] = response.name
+            },
+            removedfile: function (file) {
+                file.previewElement.remove()
+                var name = ''
+                if (typeof file.file_name !== 'undefined') {
+                    name = file.file_name
+                } else {
+                    name = uploadedDocumentMap[file.name]
+                }
+                $('form').find('input[name="document[]"][value="' + name + '"]').remove()
+            },
+            init: function () {
+                @if(isset($project) && $project->document)
+                var files =
+                    {!! json_encode($project->document) !!}
+                    for (var i in files) {
+                    var file = files[i]
+                    this.options.addedfile.call(this, file)
+                    file.previewElement.classList.add('dz-complete')
+                    $('form').append('<input type="hidden" name="document[]" value="' + file.file_name + '">')
+                }
+                @endif
+            }
+        }
     </script>
+
 @endsection

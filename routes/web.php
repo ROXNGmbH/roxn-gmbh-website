@@ -31,12 +31,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Auth::routes();
+//Auth::routes();
 
 
 Route::get('/',[HomeController::class,'index']);
 
-Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function(){
+Route::group(['prefix'=>'admin'],function(){
     Route::get('dashboard',[Dashboard::class,'index'])->name('dashboard');
     Route::resource('products',ProductController::class);
     Route::resource('categories',CategoryController::class);
@@ -48,15 +48,10 @@ Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function(){
     Route::resource('manufacturing-companies',ManufacturingCompanyController::class);
     Route::resource('delivery-times',DeliveryTimeController::class);
     Route::resource('pages',PageController::class);
-    Route::resource('sub-sub-categories',SubSubCategoryController::class);
     Route::resource('countries',CountryController::class);
     Route::resource('tags',TagController::class);
-    Route::resource('customers',CustomersController::class);
-    Route::resource('promo-codes',PromoCodeController::class);
 
     Route::get('get-sub-category',[ProductController::class,'get_sub_category'])->name('get-sub-category');
-
-    Route::post('projects/media', [ProductController::class ,'storeMedia'])->name('projects.storeMedia');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
