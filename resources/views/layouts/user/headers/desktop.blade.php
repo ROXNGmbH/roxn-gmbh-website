@@ -68,7 +68,7 @@
         <div class="container">
             <div class="header-wrap">
                 <div class="logo logo-width-1">
-                    <a href="index.html"><img src="assets/imgs/theme/logo.svg" alt="logo" /></a>
+                    <a href="index.html"><img src="{{asset('images/logo-main.png')}}" alt="logo" /></a>
                 </div>
                 <div class="header-right">
                     <div class="search-style-2">
@@ -91,43 +91,9 @@
                     </div>
                     <div class="header-action-right">
                         <div class="header-action-2">
-                            <div class="search-location">
-                                <form action="#">
-                                    <select class="select-active">
-                                        <option>Your Location</option>
-                                        <option>Alabama</option>
-                                        <option>Alaska</option>
-                                        <option>Arizona</option>
-                                        <option>Delaware</option>
-                                        <option>Florida</option>
-                                        <option>Georgia</option>
-                                        <option>Hawaii</option>
-                                        <option>Indiana</option>
-                                        <option>Maryland</option>
-                                        <option>Nevada</option>
-                                        <option>New Jersey</option>
-                                        <option>New Mexico</option>
-                                        <option>New York</option>
-                                    </select>
-                                </form>
-                            </div>
-                            <div class="header-action-icon-2">
-                                <a href="shop-compare.html">
-                                    <img class="svgInject" alt="Nest" src="assets/imgs/theme/icons/icon-compare.svg" />
-                                    <span class="pro-count blue">3</span>
-                                </a>
-                                <a href="shop-compare.html"><span class="lable ml-0">Compare</span></a>
-                            </div>
-                            <div class="header-action-icon-2">
-                                <a href="shop-wishlist.html">
-                                    <img class="svgInject" alt="Nest" src="assets/imgs/theme/icons/icon-heart.svg" />
-                                    <span class="pro-count blue">6</span>
-                                </a>
-                                <a href="shop-wishlist.html"><span class="lable">Wishlist</span></a>
-                            </div>
                             <div class="header-action-icon-2">
                                 <a class="mini-cart-icon" href="shop-cart.html">
-                                    <img alt="Nest" src="assets/imgs/theme/icons/icon-cart.svg" />
+                                    <img alt="Nest" src="{{asset('/assets/user/imgs/theme/icons/icon-cart.svg')}}" />
                                     <span class="pro-count blue">2</span>
                                 </a>
                                 <a href="shop-cart.html"><span class="lable">Cart</span></a>
@@ -135,7 +101,7 @@
                                     <ul>
                                         <li>
                                             <div class="shopping-cart-img">
-                                                <a href="shop-product-right.html"><img alt="Nest" src="assets/imgs/shop/thumbnail-3.jpg" /></a>
+                                                <a href="shop-product-right.html"><img alt="Nest" src="{{asset('assets/user/imgs/shop/thumbnail-3.jpg')}}" /></a>
                                             </div>
                                             <div class="shopping-cart-title">
                                                 <h4><a href="shop-product-right.html">Daisy Casual Bag</a></h4>
@@ -147,7 +113,7 @@
                                         </li>
                                         <li>
                                             <div class="shopping-cart-img">
-                                                <a href="shop-product-right.html"><img alt="Nest" src="assets/imgs/shop/thumbnail-2.jpg" /></a>
+                                                <a href="shop-product-right.html"><img alt="Nest" src="{{asset('assets/user/imgs/shop/thumbnail-2.jpg')}}" /></a>
                                             </div>
                                             <div class="shopping-cart-title">
                                                 <h4><a href="shop-product-right.html">Corduroy Shirts</a></h4>
@@ -171,7 +137,7 @@
                             </div>
                             <div class="header-action-icon-2">
                                 <a href="page-account.html">
-                                    <img class="svgInject" alt="Nest" src="assets/imgs/theme/icons/icon-user.svg" />
+                                    <img class="svgInject" alt="Nest" src="{{asset('assets/user/imgs/theme/icons/icon-user.svg')}}" />
                                 </a>
                                 <a href="page-account.html"><span class="lable ml-0">Account</span></a>
                                 <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
@@ -278,7 +244,6 @@
                     <div class="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block font-heading">
                         <nav>
                             <ul>
-                                <li class="hot-deals"><img src="assets/imgs/theme/icons/icon-hot.svg" alt="hot deals" /><a href="shop-grid-right.html">Hot Deals</a></li>
                                 <li>
                                     <a class="active" href="index.html">Home <i class="fi-rs-angle-down"></i></a>
                                     <ul class="sub-menu">
@@ -440,7 +405,7 @@
                     </div>
                 </div>
                 <div class="hotline d-none d-lg-flex">
-                    <img src="assets/imgs/theme/icons/icon-headphone.svg" alt="hotline" />
+                    <img src="{{asset('assets/user/imgs/theme/icons/icon-headphone.svg')}}" alt="hotline" />
                     <p>1900 - 888<span>24/7 Support Center</span></p>
                 </div>
                 <div class="header-action-icon-2 d-block d-lg-none">
