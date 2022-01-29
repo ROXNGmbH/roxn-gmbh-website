@@ -2,6 +2,17 @@
 @section('page-title','Home')
 @section('main-content')
     <!--End header-->
+
+    <ul>
+        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+            <li>
+                <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                    {{ $properties['native'] }}
+                </a>
+            </li>
+        @endforeach
+    </ul>
+
     <main class="main">
         <section class="home-slider style-2 position-relative mb-50">
             <div class="container">
