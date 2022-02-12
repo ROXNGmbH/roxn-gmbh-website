@@ -64,7 +64,7 @@
             </div>
         </div>
     </div>
-    <div class="header-middle header-middle-ptb-1 d-none d-lg-block">
+    <div class="header-middle  d-none d-lg-block">
         <div class="container">
             <div class="header-wrap">
                 <div class="logo logo-width-1">
@@ -146,16 +146,7 @@
                                             <a href="page-account.html"><i class="fi fi-rs-user mr-10"></i>My Account</a>
                                         </li>
                                         <li>
-                                            <a href="page-account.html"><i class="fi fi-rs-location-alt mr-10"></i>Order Tracking</a>
-                                        </li>
-                                        <li>
-                                            <a href="page-account.html"><i class="fi fi-rs-label mr-10"></i>My Voucher</a>
-                                        </li>
-                                        <li>
                                             <a href="shop-wishlist.html"><i class="fi fi-rs-heart mr-10"></i>My Wishlist</a>
-                                        </li>
-                                        <li>
-                                            <a href="page-account.html"><i class="fi fi-rs-settings-sliders mr-10"></i>Setting</a>
                                         </li>
                                         <li>
                                             <a href="page-login.html"><i class="fi fi-rs-sign-out mr-10"></i>Sign out</a>

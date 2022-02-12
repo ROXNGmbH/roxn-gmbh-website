@@ -23,7 +23,9 @@
     @include('layouts.user.headers.desktop')
     @include('layouts.user.headers.mobile')
     <!-- Main Content -->
-    @yield('main-content')
+    <main class="main">
+        @yield('main-content')
+    </main>
     <!-- Preloader Start -->
     @include('layouts.user.preloader')
     <!-- Footer Content -->
