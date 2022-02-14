@@ -31,18 +31,18 @@
                         <ul>
                             <li>Need help? Call Us: <strong class="text-brand"> + 1800 900</strong></li>
                             <li>
-                                <a class="language-dropdown-active" href="#">English <i class="fi-rs-angle-small-down"></i></a>
-                                <ul class="language-dropdown">
+                            <a class="language-dropdown-active">Language <i class="fi-rs-angle-small-down"></i></a>
+                            <ul class="language-dropdown">
+                                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                     <li>
-                                        <a href="#"><img src="assets/imgs/theme/flag-fr.png" alt="" />Français</a>
+                                        <a rel="alternate" hreflang="{{ $localeCode }}"
+                                           href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                            {{ $properties['native'] }}
+                                        </a>
                                     </li>
-                                    <li>
-                                        <a href="#"><img src="assets/imgs/theme/flag-dt.png" alt="" />Deutsch</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="assets/imgs/theme/flag-ru.png" alt="" />Pусский</a>
-                                    </li>
-                                </ul>
+                                @endforeach
+                            </ul>
+
                             </li>
                             <li>
                                 <a class="language-dropdown-active" href="#">USD <i class="fi-rs-angle-small-down"></i></a>
@@ -64,14 +64,14 @@
             </div>
         </div>
     </div>
-    <div class="header-middle header-middle-ptb-1 d-none d-lg-block">
+    <div class="header-middle  d-none d-lg-block">
         <div class="container">
             <div class="header-wrap">
                 <div class="logo logo-width-1">
-                    <a href="index.html"><img src="{{asset('images/logo-main.png')}}" alt="logo" /></a>
+                    <a href="index.html"><img style="height:130px" src="{{asset('images/logo-main.png')}}" alt="logo" /></a>
                 </div>
                 <div class="header-right">
-                    <div class="search-style-2">
+                    <div class="search-style-2 d-flex justify-content-center">
                         <form action="#">
                             <select class="select-active">
                                 <option>All Categories</option>
@@ -387,7 +387,7 @@
                                     <a href="#">Pages <i class="fi-rs-angle-down"></i></a>
                                     <ul class="sub-menu">
                                         <li><a href="page-about.html">About Us</a></li>
-                                        <li><a href="page-contact.html">Contact</a></li>
+                                        <li><a href="{{route('contact_us.index')}}">Contact</a></li>
                                         <li><a href="page-account.html">My Account</a></li>
                                         <li><a href="page-login.html">Login</a></li>
                                         <li><a href="page-register.html">Register</a></li>
@@ -398,7 +398,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="page-contact.html">Contact</a>
+                                    <a href="{{route('contact_us.index')}}">Contact</a>
                                 </li>
                             </ul>
                         </nav>

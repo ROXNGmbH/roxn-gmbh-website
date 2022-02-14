@@ -1,24 +1,36 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
-    <title>@yield('page-title')</title>
+    @if(app()->getLocale() == 'ar')
+    <html lang="ar" dir="rtl" class="rtl" class="no-js">
+    @else
+    <html lang="en" dir="ltr"  class="no-js" >
+    @endif
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta property="og:title" content=""/>
+        <meta property="og:type" content=""/>
+        <meta property="og:url" content=""/>
+        <meta property="og:image" content=""/>
+        <title>@yield('page-title')</title>
     @yield('page-seo')
+    @yield('styles')
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/user/imgs/theme/favicon.svg')}}" />
+        <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/user/imgs/theme/favicon.svg')}}"/>
 
-    <!-- Template CSS -->
-    <link rel="stylesheet" href="{{asset('assets/user/ltr/css/plugins/animate.min.css')}}" />
-    <link rel="stylesheet" href="{{asset('assets/user/ltr/css/main.css?v=4.0')}}" />
-</head>
-<body>
+        <!-- Template CSS -->
+
+        @if(app()->getLocale() == 'ar')
+            <link rel="stylesheet" href="{{asset('assets/user/rtl/css/plugins/animate.min.css')}}"/>
+            <link rel="stylesheet" href="{{asset('assets/user/rtl/css/main.css?v=4.0')}}"/>
+        @else
+            <link rel="stylesheet" href="{{asset('assets/user/ltr/css/plugins/animate.min.css')}}"/>
+            <link rel="stylesheet" href="{{asset('assets/user/ltr/css/main.css?v=4.0')}}"/>
+        @endif
+
+    </head>
+    <body>
     <!-- Headers Content -->
     @include('layouts.user.headers.desktop')
     @include('layouts.user.headers.mobile')
@@ -53,4 +65,6 @@
     <script src="{{asset('assets/user/js/main.js?v=4.0')}}"></script>
     <script src="{{asset('assets/user/js/shop.js?v=4.0')}}"></script>
 
-</body>
+
+    @yield('scripts')
+    </body>
