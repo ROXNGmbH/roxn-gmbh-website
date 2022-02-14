@@ -200,6 +200,8 @@
                 zoom: 3
             })
 
+
+
             // set leaflet tile layer
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -266,7 +268,7 @@
                 attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(leaflet);
 
-            
+
 
             // Define Marker Layer
             var markerLayer = L.layerGroup().addTo(leaflet);
@@ -357,7 +359,7 @@
         multiMarkColors();
         MultiMark();
         interactiveMap();
-        
+
     });
 
 })(jQuery);

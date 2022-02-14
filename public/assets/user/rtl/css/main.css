@@ -113,6 +113,12 @@ input[type=number]:focus,
   outline: none !important;
   -webkit-box-shadow: none;
           box-shadow: none;
+
+}
+input[type=number],
+input[type=tel],
+input[type=email]{
+    text-align: right;
 }
 
 input:focus::-moz-placeholder {

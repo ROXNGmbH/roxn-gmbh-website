@@ -23,7 +23,7 @@
                     <li><a href="#">Delivery Information</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                     <li><a href="#">Terms &amp; Conditions</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="{{route('contact_us.index')}}">Contact Us</a></li>
                     <li><a href="#">Support Center</a></li>
                     <li><a href="#">Careers</a></li>
                 </ul>

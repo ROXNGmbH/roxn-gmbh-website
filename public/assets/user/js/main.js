@@ -2,8 +2,8 @@
     ("use strict");
     // Page loading
     $(window).on("load", function () {
-        $("#preloader-active").delay(450).fadeOut("slow");
-        $("body").delay(450).css({
+        $("#preloader-active").delay(1000).fadeOut(1000);
+        $("body").delay(1000).css({
             overflow: "visible"
         });
         $("#onloadModal").modal("show");
@@ -486,7 +486,7 @@
     }
 
     /*-----------------------
-        Shop filter active 
+        Shop filter active
     ------------------------- */
     $(".shop-filter-toogle").on("click", function (e) {
         e.preventDefault();
