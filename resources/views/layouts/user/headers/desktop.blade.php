@@ -9,8 +9,7 @@
                     <div class="header-info">
                         <ul>
                             <li><a href="page-about.htlm">About Us</a></li>
-                            <li><a href="page-account.html">My Account</a></li>
-                            <li><a href="shop-wishlist.html">Wishlist</a></li>
+                            <li><a href="{{url('my-account')}}">My Account</a></li>
                             <li><a href="shop-order.html">Order Tracking</a></li>
                         </ul>
                     </div>
@@ -139,14 +138,11 @@
                                 <a href="page-account.html">
                                     <img class="svgInject" alt="Nest" src="{{asset('assets/user/imgs/theme/icons/icon-user.svg')}}" />
                                 </a>
-                                <a href="page-account.html"><span class="lable ml-0">Account</span></a>
+                                <a href="{{url('my-account')}}"><span class="lable ml-0">Account</span></a>
                                 <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
                                     <ul>
                                         <li>
-                                            <a href="page-account.html"><i class="fi fi-rs-user mr-10"></i>My Account</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-wishlist.html"><i class="fi fi-rs-heart mr-10"></i>My Wishlist</a>
+                                            <a href="{{url('my-account')}}"><i class="fi fi-rs-user mr-10"></i>My Account</a>
                                         </li>
                                         <li>
                                             <a href="page-login.html"><i class="fi fi-rs-sign-out mr-10"></i>Sign out</a>

@@ -17,8 +17,9 @@ use App\Http\Controllers\admin\TagController;
 use App\Http\Controllers\admin\SubSubCategoryController;
 use App\Http\Controllers\admin\TaxController;
 use App\Http\Controllers\admin\UnitController;
-use App\Http\Controllers\user\ContactUsController;
-use App\Http\Controllers\user\HomeController;
+use App\Http\Controllers\User\AccountController;
+use App\Http\Controllers\User\ContactUsController;
+use App\Http\Controllers\User\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -40,6 +41,10 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),
     'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
 ], function () {
     Route::get('/', [HomeController::class, 'index']);
+
+
+    //Customer Account
+    Route::get('my-account',[AccountController::class,'show']);
 
     Route::get('contact-us', [ContactUsController::class, 'index'])->name('contact_us.index');
     Route::post('contact-us', [ContactUsController::class, 'store'])->name('contact_us.store');
