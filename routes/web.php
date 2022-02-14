@@ -44,6 +44,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),
     Route::get('contact-us', [ContactUsController::class, 'index'])->name('contact_us.index');
     Route::post('contact-us', [ContactUsController::class, 'store'])->name('contact_us.store');
 
+    Auth::routes();
+
 });
 
 Route::group(['prefix' => 'admin'], function () {
@@ -72,3 +74,5 @@ Route::group(['prefix' => 'admin'], function () {
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
