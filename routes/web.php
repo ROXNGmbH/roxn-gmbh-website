@@ -18,6 +18,8 @@ use App\Http\Controllers\admin\SubSubCategoryController;
 use App\Http\Controllers\admin\TaxController;
 use App\Http\Controllers\admin\UnitController;
 use App\Http\Controllers\User\AccountController;
+use App\Http\Controllers\User\CartController;
+use App\Http\Controllers\User\CheckoutController;
 use App\Http\Controllers\User\ContactUsController;
 use App\Http\Controllers\User\HomeController;
 use Illuminate\Support\Facades\Auth;
@@ -44,7 +46,13 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),
 
 
     //Customer Account
-    Route::get('my-account',[AccountController::class,'show']);
+    Route::get('my-account',[AccountController::class,'show'])->name('my-account');
+
+    //Cart
+    Route::get('cart',[CartController::class,'show'])->name('show.cart');
+
+    //Checkout
+    Route::get('checkout',[CheckoutController::class,'checkoutView'])->name('checkout.view');
 
     Route::get('contact-us', [ContactUsController::class, 'index'])->name('contact_us.index');
     Route::post('contact-us', [ContactUsController::class, 'store'])->name('contact_us.store');
