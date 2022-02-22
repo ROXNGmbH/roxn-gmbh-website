@@ -10,7 +10,7 @@
     'locale' => 'de',
     'fallback_locale' => 'de',
     'faker_locale' => 'de',
-    'key' => 'base64:imjcIcLUAivh1tBgHeYmu4stcJfYICtCOtumIB4NLkc=',
+    'key' => 'base64:93qS8DAT8U0CsxJP4LQWKcNLBLO/1jz0Xw5r77kH0SQ=',
     'cipher' => 'AES-256-CBC',
     'providers' => 
     array (
@@ -183,7 +183,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\Users\\user\\Desktop\\roxn-gmbh\\storage\\framework/cache/data',
+        'path' => 'C:\\Users\\USER\\Desktop\\roxn-gmbh-website\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -266,7 +266,7 @@
       array (
         'driver' => 'sqlite',
         'url' => NULL,
-        'database' => 'roxn_gmbh',
+        'database' => 'roxn-gmbh',
         'prefix' => '',
         'foreign_key_constraints' => true,
       ),
@@ -276,9 +276,9 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'roxn_gmbh',
+        'database' => 'roxn-gmbh',
         'username' => 'root',
-        'password' => 'yazeed99',
+        'password' => '',
         'unix_socket' => '',
         'charset' => 'utf8mb4',
         'collation' => 'utf8mb4_unicode_ci',
@@ -296,9 +296,9 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'roxn_gmbh',
+        'database' => 'roxn-gmbh',
         'username' => 'root',
-        'password' => 'yazeed99',
+        'password' => '',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -311,9 +311,9 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'roxn_gmbh',
+        'database' => 'roxn-gmbh',
         'username' => 'root',
-        'password' => 'yazeed99',
+        'password' => '',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -354,12 +354,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\user\\Desktop\\roxn-gmbh\\storage\\app',
+        'root' => 'C:\\Users\\USER\\Desktop\\roxn-gmbh-website\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\user\\Desktop\\roxn-gmbh\\public/uploads',
+        'root' => 'C:\\Users\\USER\\Desktop\\roxn-gmbh-website\\public/uploads',
         'url' => 'http://127.0.0.1:8000/uploads',
         'visibility' => 'public',
       ),
@@ -377,7 +377,7 @@
     ),
     'links' => 
     array (
-      'C:\\Users\\user\\Desktop\\roxn-gmbh\\public\\storage' => 'C:\\Users\\user\\Desktop\\roxn-gmbh\\storage\\app/public',
+      'C:\\Users\\USER\\Desktop\\roxn-gmbh-website\\public\\storage' => 'C:\\Users\\USER\\Desktop\\roxn-gmbh-website\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -453,13 +453,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\Users\\user\\Desktop\\roxn-gmbh\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\USER\\Desktop\\roxn-gmbh-website\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\Users\\user\\Desktop\\roxn-gmbh\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\USER\\Desktop\\roxn-gmbh-website\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -510,7 +510,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'C:\\Users\\user\\Desktop\\roxn-gmbh\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\USER\\Desktop\\roxn-gmbh-website\\storage\\logs/laravel.log',
       ),
       'bugsnag' => 
       array (
@@ -580,7 +580,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\Users\\user\\Desktop\\roxn-gmbh\\resources\\views/vendor/mail',
+        0 => 'C:\\Users\\USER\\Desktop\\roxn-gmbh-website\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -663,7 +663,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\Users\\user\\Desktop\\roxn-gmbh\\storage\\framework/sessions',
+    'files' => 'C:\\Users\\USER\\Desktop\\roxn-gmbh-website\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -726,9 +726,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\Users\\user\\Desktop\\roxn-gmbh\\resources\\views',
+      0 => 'C:\\Users\\USER\\Desktop\\roxn-gmbh-website\\resources\\views',
     ),
-    'compiled' => 'C:\\Users\\user\\Desktop\\roxn-gmbh\\storage\\framework\\views',
+    'compiled' => 'C:\\Users\\USER\\Desktop\\roxn-gmbh-website\\storage\\framework\\views',
   ),
   'flare' => 
   array (
@@ -854,7 +854,7 @@
   ),
   'bugsnag' => 
   array (
-    'api_key' => '7d0674aa9c23ecae815c15732f099b8f',
+    'api_key' => '',
     'app_type' => NULL,
     'app_version' => NULL,
     'batch_sending' => NULL,
