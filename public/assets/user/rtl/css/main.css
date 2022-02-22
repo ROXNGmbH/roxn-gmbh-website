@@ -4257,7 +4257,7 @@ table .product-thumbnail img {
   display: inline-block;
   padding: 6px 20px 6px 20px;
   border-radius: 4px;
-  background-color: #DEF9EC;
+  /*background-color: #DEF9EC;*/
   font-size: 14px;
   font-weight: 700;
 }

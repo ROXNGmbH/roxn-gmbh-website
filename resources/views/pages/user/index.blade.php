@@ -14,10 +14,6 @@
                                         grocery deals
                                     </h1>
                                     <p class="mb-65">Sign up for the daily newsletter</p>
-                                    <form class="form-subcriber d-flex">
-                                        <input type="email" placeholder="Your emaill address" />
-                                        <button class="btn" type="submit">Subscribe</button>
-                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -97,9 +93,7 @@
                                             <img class="hover-img" src="{{asset('assets/user/imgs/shop/product-1-2.jpg')}}" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
-                                    </div>
+
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="hot">Hot</span>
                                     </div>
@@ -140,10 +134,7 @@
                                             <img class="hover-img" src="{{asset('assets/user/imgs/shop/product-2-2.jpg')}}" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="sale">Sale</span>
                                     </div>
@@ -184,10 +175,7 @@
                                             <img class="hover-img" src="{{asset('assets/user/imgs/shop/product-3-2.jpg')}}" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="new">New</span>
                                     </div>
@@ -228,10 +216,7 @@
                                             <img class="hover-img" src="{{asset('assets/imgs/shop/product-4-2.jpg')}}" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                 </div>
                                 <div class="product-content-wrap">
                                     <div class="product-category">
@@ -269,10 +254,7 @@
                                             <img class="hover-img" src="{{asset('assets/user/imgs/shop/product-5-2.jpg')}}" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="best">-14%</span>
                                     </div>
@@ -313,10 +295,7 @@
                                             <img class="hover-img" src="{{asset('assets/user/imgs/shop/product-6-2.jpg')}}" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                 </div>
                                 <div class="product-content-wrap">
                                     <div class="product-category">
@@ -354,10 +333,7 @@
                                             <img class="hover-img" src="{{asset('assets/user/imgs/shop/product-6-1.jpg')}}" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                 </div>
                                 <div class="product-content-wrap">
                                     <div class="product-category">
@@ -395,10 +371,7 @@
                                             <img class="hover-img" src="{{asset('assets/user/imgs/shop/product-6-1.jpg')}}" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="sale">Sale</span>
                                     </div>
@@ -439,10 +412,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-9-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="hot">Hot</span>
                                     </div>
@@ -483,10 +453,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-10-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                 </div>
                                 <div class="product-content-wrap">
                                     <div class="product-category">
@@ -530,10 +497,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-10-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="hot">Hot</span>
                                     </div>
@@ -574,10 +538,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-12-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="sale">Sale</span>
                                     </div>
@@ -618,10 +579,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-13-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="new">New</span>
                                     </div>
@@ -662,10 +620,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-14-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                 </div>
                                 <div class="product-content-wrap">
                                     <div class="product-category">
@@ -703,10 +658,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-15-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="best">-14%</span>
                                     </div>
@@ -747,10 +699,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-16-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                 </div>
                                 <div class="product-content-wrap">
                                     <div class="product-category">
@@ -788,10 +737,7 @@
                                             <img class="hover-img" src="{{asset('assets/user/imgs/shop/product-6-1.jpg')}}" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                 </div>
                                 <div class="product-content-wrap">
                                     <div class="product-category">
@@ -829,10 +775,7 @@
                                             <img class="hover-img" src="{{asset('assets/user/imgs/shop/product-6-1.jpg')}}" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="sale">Sale</span>
                                     </div>
@@ -873,10 +816,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-9-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="hot">Hot</span>
                                     </div>
@@ -917,10 +857,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-10-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                 </div>
                                 <div class="product-content-wrap">
                                     <div class="product-category">
@@ -964,10 +901,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-9-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="hot">Hot</span>
                                     </div>
@@ -1008,10 +942,7 @@
                                             <img class="hover-img" src="{{asset('assets/user/imgs/shop/product-6-1.jpg')}}" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="sale">Sale</span>
                                     </div>
@@ -1052,10 +983,7 @@
                                             <img class="hover-img" src="{{asset('assets/user/imgs/shop/product-6-1.jpg')}}" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="new">New</span>
                                     </div>
@@ -1096,10 +1024,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-6-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                 </div>
                                 <div class="product-content-wrap">
                                     <div class="product-category">
@@ -1137,10 +1062,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-5-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="best">-14%</span>
                                     </div>
@@ -1181,10 +1103,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-4-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                 </div>
                                 <div class="product-content-wrap">
                                     <div class="product-category">
@@ -1222,10 +1141,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-3-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                 </div>
                                 <div class="product-content-wrap">
                                     <div class="product-category">
@@ -2022,10 +1938,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-16-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="best">-14%</span>
                                     </div>
@@ -2066,10 +1979,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-5-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                 </div>
                                 <div class="product-content-wrap">
                                     <div class="product-category">
@@ -2107,10 +2017,7 @@
                                             <img class="hover-img" src="{{asset('assets/user/imgs/shop/product-6-1.jpg')}}" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                 </div>
                                 <div class="product-content-wrap">
                                     <div class="product-category">
@@ -2148,10 +2055,7 @@
                                             <img class="hover-img" src="{{asset('assets/user/imgs/shop/product-6-1.jpg')}}" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="sale">Sale</span>
                                     </div>
@@ -2192,10 +2096,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-9-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="hot">Hot</span>
                                     </div>
@@ -2236,10 +2137,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-10-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                 </div>
                                 <div class="product-content-wrap">
                                     <div class="product-category">
@@ -2283,10 +2181,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-4-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="hot">Hot</span>
                                     </div>
@@ -2327,10 +2222,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-6-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="sale">Sale</span>
                                     </div>
@@ -2371,10 +2263,7 @@
                                             <img class="hover-img" src="{{asset('assets/user/imgs/shop/product-6-1.jpg')}}" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="new">New</span>
                                     </div>
@@ -2415,10 +2304,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-9-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                 </div>
                                 <div class="product-content-wrap">
                                     <div class="product-category">
@@ -2456,10 +2342,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-5-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
 
-                                    </div>
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="best">-14%</span>
                                     </div>
@@ -2500,9 +2383,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-6-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
-                                    </div>
+
                                 </div>
                                 <div class="product-content-wrap">
                                     <div class="product-category">
@@ -2540,9 +2421,7 @@
                                             <img class="hover-img" src="{{asset('assets/user/imgs/shop/product-6-1.jpg')}}" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
-                                    </div>
+
                                 </div>
                                 <div class="product-content-wrap">
                                     <div class="product-category">
@@ -2580,9 +2459,7 @@
                                             <img class="hover-img" src="{{asset('assets/user/imgs/shop/product-6-1.jpg')}}" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
-                                    </div>
+
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="sale">Sale</span>
                                     </div>
@@ -2623,9 +2500,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-9-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
-                                    </div>
+
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="hot">Hot</span>
                                     </div>
@@ -2666,9 +2541,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-10-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
-                                    </div>
+
                                 </div>
                                 <div class="product-content-wrap">
                                     <div class="product-category">
@@ -2712,9 +2585,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-5-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
-                                    </div>
+
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="hot">Hot</span>
                                     </div>
@@ -2755,9 +2626,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-3-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
-                                    </div>
+
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="sale">Sale</span>
                                     </div>
@@ -2798,9 +2667,7 @@
                                             <img class="hover-img" src="{{asset('assets/user/imgs/shop/product-6-1.jpg')}}" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
-                                    </div>
+
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="new">New</span>
                                     </div>
@@ -2841,9 +2708,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-9-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
-                                    </div>
+
                                 </div>
                                 <div class="product-content-wrap">
                                     <div class="product-category">
@@ -2881,9 +2746,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-10-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
-                                    </div>
+
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="best">-14%</span>
                                     </div>
@@ -2924,9 +2787,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-16-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
-                                    </div>
+
                                 </div>
                                 <div class="product-content-wrap">
                                     <div class="product-category">
@@ -2964,9 +2825,7 @@
                                             <img class="hover-img" src="{{asset('assets/user/imgs/shop/product-6-1.jpg')}}" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
-                                    </div>
+
                                 </div>
                                 <div class="product-content-wrap">
                                     <div class="product-category">
@@ -3004,9 +2863,7 @@
                                             <img class="hover-img" src="{{asset('assets/user/imgs/shop/product-6-1.jpg')}}" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
-                                    </div>
+
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="sale">Sale</span>
                                     </div>
@@ -3047,9 +2904,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-9-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
-                                    </div>
+
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="hot">Hot</span>
                                     </div>
@@ -3090,9 +2945,7 @@
                                             <img class="hover-img" src="assets/imgs/shop/product-10-2.jpg" alt="" />
                                         </a>
                                     </div>
-                                    <div class="product-action-1">
-                                        <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
-                                    </div>
+
                                 </div>
                                 <div class="product-content-wrap">
                                     <div class="product-category">
