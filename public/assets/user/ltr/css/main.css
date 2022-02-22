@@ -12362,3 +12362,34 @@ footer .hotline img {
   }
 }
 /*# sourceMappingURL=main.css.map */
+
+
+
+.detail-gallery .product-image-slider {
+    background-color: #fff;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    border: 1px solid #ececec;
+    overflow: hidden;
+}
+
+.detail-gallery .product-image-slider img {
+    opacity: 1;
+    border-radius: 16px;
+}
+
+.detail-gallery .product-image-slider.slider-nav-thumbnails {
+    background: none;
+    border-radius: 0;
+}
+
+.detail-gallery .product-image-slider button.slick-arrow {
+    background: none;
+    border: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.detail-gallery .product-image-slider button.slick-arrow i {
+    color: #adadad;
+}

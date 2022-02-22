@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Models\admin\Page;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class PageController extends Controller
 {
@@ -43,7 +44,7 @@ class PageController extends Controller
             'title_ar' => 'required|string',
             'title_de' => 'required|string',
             'description_ar' => 'required|string',
-            'description_de' => 'required|string'
+            'description_de' => 'required|string',
         ]);
 
         try {
@@ -60,6 +61,7 @@ class PageController extends Controller
                     'ar' => $data['description_ar'],
                     'de' => $data['description_de']
                 ],
+                'slug' => Str::slug($data['name_de']),
                 'status' => $request->status ? 1 : 0,
             ]);
 

@@ -8,10 +8,8 @@
                 <div class="col-xl-3 col-lg-4">
                     <div class="header-info">
                         <ul>
-                            <li><a href="page-about.htlm">About Us</a></li>
-                            <li><a href="page-account.html">My Account</a></li>
-                            <li><a href="shop-wishlist.html">Wishlist</a></li>
-                            <li><a href="shop-order.html">Order Tracking</a></li>
+                            <li><a href="page-about.htlm">{{__('home.about us')}}</a></li>
+                            <li><a href="page-account.html">{{__('home.my account')}}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -29,9 +27,9 @@
                 <div class="col-xl-3 col-lg-4">
                     <div class="header-info header-info-right">
                         <ul>
-                            <li>Need help? Call Us: <strong class="text-brand"> + 1800 900</strong></li>
+                            <li>{{__('home.call us')}} : <strong class="text-brand"> + 1800 900</strong></li>
                             <li>
-                            <a class="language-dropdown-active">Language <i class="fi-rs-angle-small-down"></i></a>
+                            <a class="language-dropdown-active">{{__('home.language')}} <i class="fi-rs-angle-small-down"></i></a>
                             <ul class="language-dropdown">
                                 @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                     <li>
@@ -43,20 +41,6 @@
                                 @endforeach
                             </ul>
 
-                            </li>
-                            <li>
-                                <a class="language-dropdown-active" href="#">USD <i class="fi-rs-angle-small-down"></i></a>
-                                <ul class="language-dropdown">
-                                    <li>
-                                        <a href="#"><img src="assets/imgs/theme/flag-fr.png" alt="" />INR</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="assets/imgs/theme/flag-dt.png" alt="" />MBP</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="assets/imgs/theme/flag-ru.png" alt="" />EU</a>
-                                    </li>
-                                </ul>
                             </li>
                         </ul>
                     </div>
@@ -86,7 +70,7 @@
                                 <option>Noodles & Rice</option>
                                 <option>Ice cream</option>
                             </select>
-                            <input type="text" placeholder="Search for items..." />
+                            <input type="text" placeholder="{{__('home.search')}}" />
                         </form>
                     </div>
                     <div class="header-action-right">
@@ -139,14 +123,11 @@
                                 <a href="page-account.html">
                                     <img class="svgInject" alt="Nest" src="{{asset('assets/user/imgs/theme/icons/icon-user.svg')}}" />
                                 </a>
-                                <a href="page-account.html"><span class="lable ml-0">Account</span></a>
+                                <a href="page-account.html"><span class="lable ml-0">{{__('home.Account')}}</span></a>
                                 <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
                                     <ul>
                                         <li>
-                                            <a href="page-account.html"><i class="fi fi-rs-user mr-10"></i>My Account</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-wishlist.html"><i class="fi fi-rs-heart mr-10"></i>My Wishlist</a>
+                                            <a href="page-account.html"><i class="fi fi-rs-user mr-10"></i>{{__('home.my account')}}</a>
                                         </li>
                                         <li>
                                             <a href="page-login.html"><i class="fi fi-rs-sign-out mr-10"></i>Sign out</a>

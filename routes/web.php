@@ -40,10 +40,11 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),
     'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
 ], function () {
     Route::get('/', [HomeController::class, 'index']);
-
     Route::get('contact-us', [ContactUsController::class, 'index'])->name('contact_us.index');
     Route::post('contact-us', [ContactUsController::class, 'store'])->name('contact_us.store');
-
+    Route::get('product', [App\Http\Controllers\user\ProductController::class, 'index'])->name('product.index');
+    Route::get('page/{slug}', [App\Http\Controllers\user\PageController::class, 'getPage']);
+    Route::get('filter-product',[App\Http\Controllers\user\ProductController::class, 'filter_product'])->name('filter_product');
 });
 
 Route::group(['prefix' => 'admin'], function () {
