@@ -17,8 +17,11 @@ use App\Http\Controllers\admin\TagController;
 use App\Http\Controllers\admin\SubSubCategoryController;
 use App\Http\Controllers\admin\TaxController;
 use App\Http\Controllers\admin\UnitController;
-use App\Http\Controllers\user\ContactUsController;
-use App\Http\Controllers\user\HomeController;
+use App\Http\Controllers\User\AccountController;
+use App\Http\Controllers\User\CartController;
+use App\Http\Controllers\User\CheckoutController;
+use App\Http\Controllers\User\ContactUsController;
+use App\Http\Controllers\User\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -40,11 +43,25 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),
     'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
 ], function () {
     Route::get('/', [HomeController::class, 'index']);
+
+
+    //Customer Account
+    Route::get('my-account',[AccountController::class,'show'])->name('my-account');
+
+    //Cart
+    Route::get('cart',[CartController::class,'show'])->name('show.cart');
+
+    //Checkout
+    Route::get('checkout',[CheckoutController::class,'checkoutView'])->name('checkout.view');
+
     Route::get('contact-us', [ContactUsController::class, 'index'])->name('contact_us.index');
     Route::post('contact-us', [ContactUsController::class, 'store'])->name('contact_us.store');
     Route::get('product', [App\Http\Controllers\user\ProductController::class, 'index'])->name('product.index');
     Route::get('page/{slug}', [App\Http\Controllers\user\PageController::class, 'getPage']);
     Route::get('filter-product',[App\Http\Controllers\user\ProductController::class, 'filter_product'])->name('filter_product');
+
+    Auth::routes();
+
 });
 
 Route::group(['prefix' => 'admin'], function () {

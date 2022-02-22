@@ -3,21 +3,7 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-
-// require('./bootstrap');
-import Alpine from 'alpinejs'
-
-window.Alpine = Alpine
-
-Alpine.start()
-
-const axios = require('axios');
-window.axios = require('axios');
-
-const swal = window.swal = require('sweetalert2');
-
-
-// window.Vue = require('vue').default;
+window.Vue = require('vue').default;
 
 /**
  * The following block of code may be used to automatically register your
@@ -29,8 +15,8 @@ const swal = window.swal = require('sweetalert2');
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-//
-// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+
+Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -38,6 +24,6 @@ const swal = window.swal = require('sweetalert2');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-// const app = new Vue({
-//     el: '#app',
-// });
+const app = new Vue({
+    el: '#app',
+});
