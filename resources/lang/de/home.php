@@ -31,6 +31,7 @@ return [
     'All rights reserved' => 'Alle Rechte vorbehalten',
     'Follow Us' => 'Folgen Sie uns',
     'Secured Payment Gateways' => 'Sichere Zahlungsarten',
-    'Email' => 'E-Mail'
+    'Email' => 'E-Mail',
+    'Checkout' => 'Kasse'
 
 ];

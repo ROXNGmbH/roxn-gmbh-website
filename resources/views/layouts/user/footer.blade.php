@@ -25,14 +25,14 @@
                 </ul>
             </div>
             <div class="footer-link-widget col wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
-                <h4 class="widget-title">Account</h4>
+                <h4 class="widget-title">{{__('home.Account')}}</h4>
                 <ul class="footer-list mb-sm-5 mb-md-0">
                     <li><a href="#">Sign In</a></li>
                     <li><a href="#">View Cart</a></li>
                 </ul>
             </div>
             <div class="footer-link-widget col wow animate__animated animate__fadeInUp" data-wow-delay=".4s">
-                <h4 class="widget-title">Popular</h4>
+                <h4 class="widget-title">{{__('home.Popular')}}</h4>
                 <ul class="footer-list mb-sm-5 mb-md-0">
                     <li><a href="#">Milk & Flavoured Milk</a></li>
                     <li><a href="#">Butter and Margarine</a></li>
@@ -72,7 +72,7 @@
             </div>
             <div class="col-xl-4 col-lg-6 col-md-6 text-end d-none d-md-block">
                 <div class="mobile-social-icon">
-                    <h6>Follow Us</h6>
+                    <h6>{{__('home.Follow Us')}}</h6>
                     <a href="#"><img src="{{asset('assets/user/imgs/theme/icons/icon-facebook-white.svg')}}" alt="" /></a>
                     <a href="#"><img src="{{asset('assets/user/imgs/theme/icons/icon-twitter-white.svg')}}" alt="" /></a>
                     <a href="#"><img src="{{asset('assets/user/imgs/theme/icons/icon-instagram-white.svg')}}" alt="" /></a>

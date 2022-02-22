@@ -1,7 +1,4 @@
 <header class="header-area header-style-1 header-height-2">
-    <div class="mobile-promotion">
-        <span>Grand opening, <strong>up to 15%</strong> off all items. Only <strong>3 days</strong> left</span>
-    </div>
     <div class="header-top header-top-ptb-1 d-none d-lg-block">
         <div class="container">
             <div class="row align-items-center">
@@ -18,9 +15,9 @@
                 <div class="col-xl-3 col-lg-4">
                     <div class="header-info header-info-right">
                         <ul>
-                            <li>Need help? Call Us: <strong class="text-brand"> + 1800 900</strong></li>
+                            <li>{{__('home.need help')}}? {{__('home.call us')}}: <strong class="text-brand"> + 1800 900</strong></li>
                             <li>
-                            <a class="language-dropdown-active">Language <i class="fi-rs-angle-small-down"></i></a>
+                            <a class="language-dropdown-active">{{__('home.language')}} <i class="fi-rs-angle-small-down"></i></a>
                             <ul class="language-dropdown">
                                 @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                     <li>
@@ -49,7 +46,7 @@
                     <div class="search-style-2 d-flex justify-content-center">
                         <form action="#">
                             <select class="select-active">
-                                <option>All Categories</option>
+                                <option>{{__('home.browse all categories')}}</option>
                                 <option>Milks and Dairies</option>
                                 <option>Wines & Alcohol</option>
                                 <option>Clothing & Beauty</option>
@@ -71,7 +68,7 @@
                                     <img alt="Nest" src="{{asset('/assets/user/imgs/theme/icons/icon-cart.svg')}}" />
                                     <span class="pro-count blue">2</span>
                                 </a>
-                                <a href="shop-cart.html"><span class="lable">Cart</span></a>
+                                <a href="shop-cart.html"><span class="lable">{{__('home.cart')}}</span></a>
                                 <div class="cart-dropdown-wrap cart-dropdown-hm2">
                                     <ul>
                                         <li>
@@ -104,8 +101,8 @@
                                             <h4>Total <span>$4000.00</span></h4>
                                         </div>
                                         <div class="shopping-cart-button">
-                                            <a href="shop-cart.html" class="outline">View cart</a>
-                                            <a href="shop-checkout.html">Checkout</a>
+                                            <a href="shop-cart.html" class="outline">{{__('home.View cart')}}</a>
+                                            <a href="shop-checkout.html">{{__('home.Checkout')}}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -114,14 +111,14 @@
                                 <a href="page-account.html">
                                     <img class="svgInject" alt="Nest" src="{{asset('assets/user/imgs/theme/icons/icon-user.svg')}}" />
                                 </a>
-                                <a href="page-account.html"><span class="lable ml-0">Account</span></a>
+                                <a href="page-account.html"><span class="lable ml-0">{{__('home.Account')}}</span></a>
                                 <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
                                     <ul>
                                         <li>
-                                            <a href="page-account.html"><i class="fi fi-rs-user mr-10"></i>My Account</a>
+                                            <a href="page-account.html"><i class="fi fi-rs-user mr-10"></i>{{__('home.my account')}}</a>
                                         </li>
                                         <li>
-                                            <a href="page-login.html"><i class="fi fi-rs-sign-out mr-10"></i>Sign out</a>
+                                            <a href="page-login.html"><i class="fi fi-rs-sign-out mr-10"></i>{{__('home.Sign out')}}</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -136,12 +133,12 @@
         <div class="container">
             <div class="header-wrap header-space-between position-relative">
                 <div class="logo logo-width-1 d-block d-lg-none">
-                    <a href="index.html"><img src="assets/imgs/theme/logo.svg" alt="logo" /></a>
+                    <a href="index.html"><img  src="{{asset('images/logo-main.png')}}" alt="logo" /></a>
                 </div>
                 <div class="header-nav d-none d-lg-flex">
                     <div class="main-categori-wrap d-none d-lg-block">
                         <a class="categories-button-active" href="#">
-                            <span class="fi-rs-apps"></span> <span class="et">Browse</span> All Categories
+                            <span class="fi-rs-apps"></span> <span class="et"></span> {{__('home.browse all categories')}}
                             <i class="fi-rs-angle-down"></i>
                         </a>
                         <div class="categories-dropdown-wrap categories-dropdown-active-large font-heading">
@@ -208,20 +205,20 @@
                         <nav>
                             <ul>
                                 <li>
-                                    <a class="active" href="/">Home</a>
+                                    <a class="active" href="/">{{__('home.home')}}</a>
                                 </li>
                                 <li>
-                                    <a href="/about">About</a>
+                                    <a href="/about">{{__('home.about us')}}</a>
                                 </li>
                                 <li>
                                     <a href="#">Pages <i class="fi-rs-angle-down"></i></a>
                                     <ul class="sub-menu">
-                                        <li><a href="page-about.html">About Us</a></li>
-                                        <li><a href="{{route('contact_us.index')}}">Contact</a></li>
+                                        <li><a href="page-about.html">{{__('home.about us')}}</a></li>
+                                        <li><a href="{{route('contact_us.index')}}">{{__('home.contact')}}</a></li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="{{route('contact_us.index')}}">Contact</a>
+                                    <a href="{{route('contact_us.index')}}">{{__('home.contact')}}</a>
                                 </li>
                             </ul>
                         </nav>
@@ -242,20 +239,20 @@
                     <div class="header-action-2">
                         <div class="header-action-icon-2">
                             <a href="shop-wishlist.html">
-                                <img alt="Nest" src="assets/imgs/theme/icons/icon-heart.svg" />
+                                <img alt="Nest" src="{{asset('assets/user/imgs/theme/icons/icon-heart.svg')}}" />
                                 <span class="pro-count white">4</span>
                             </a>
                         </div>
                         <div class="header-action-icon-2">
                             <a class="mini-cart-icon" href="#">
-                                <img alt="Nest" src="assets/imgs/theme/icons/icon-cart.svg" />
+                                <img alt="Nest" src="{{asset('assets/user/imgs/theme/icons/icon-cart.svg')}}" />
                                 <span class="pro-count white">2</span>
                             </a>
                             <div class="cart-dropdown-wrap cart-dropdown-hm2">
                                 <ul>
                                     <li>
                                         <div class="shopping-cart-img">
-                                            <a href="shop-product-right.html"><img alt="Nest" src="assets/imgs/shop/thumbnail-3.jpg" /></a>
+                                            <a href="shop-product-right.html"><img alt="Nest" src="{{asset('assets/user/imgs/shop/thumbnail-3.jpg')}}" /></a>
                                         </div>
                                         <div class="shopping-cart-title">
                                             <h4><a href="shop-product-right.html">Plain Striola Shirts</a></h4>
@@ -267,7 +264,7 @@
                                     </li>
                                     <li>
                                         <div class="shopping-cart-img">
-                                            <a href="shop-product-right.html"><img alt="Nest" src="assets/imgs/shop/thumbnail-4.jpg" /></a>
+                                            <a href="shop-product-right.html"><img alt="Nest" src="{{asset('assets/user/imgs/shop/thumbnail-4.jpg')}}" /></a>
                                         </div>
                                         <div class="shopping-cart-title">
                                             <h4><a href="shop-product-right.html">Macbook Pro 2022</a></h4>
@@ -283,8 +280,8 @@
                                         <h4>Total <span>$383.00</span></h4>
                                     </div>
                                     <div class="shopping-cart-button">
-                                        <a href="shop-cart.html">View cart</a>
-                                        <a href="shop-checkout.html">Checkout</a>
+                                        <a href="shop-cart.html">{{__('home.View cart')}}</a>
+                                        <a href="shop-checkout.html">{{__('home.Checkout')}}</a>
                                     </div>
                                 </div>
                             </div>

@@ -55,10 +55,10 @@
     <section class="product-tabs section-padding position-relative">
         <div class="container">
             <div class="section-title style-2 wow animate__animated animate__fadeIn">
-                <h3>Popular Products</h3>
+                <h3>{{__('home.popular products')}}</h3>
                 <ul class="nav nav-tabs links" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="nav-tab-one" data-bs-toggle="tab" data-bs-target="#tab-one" type="button" role="tab" aria-controls="tab-one" aria-selected="true">All</button>
+                        <button class="nav-link active" id="nav-tab-one" data-bs-toggle="tab" data-bs-target="#tab-one" type="button" role="tab" aria-controls="tab-one" aria-selected="true">{{__('home.all')}}</button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="nav-tab-two" data-bs-toggle="tab" data-bs-target="#tab-two" type="button" role="tab" aria-controls="tab-two" aria-selected="false">Milks & Dairies</button>
@@ -3060,7 +3060,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-sm-5 mb-md-0 wow animate__animated animate__fadeInUp" data-wow-delay="0">
-                    <h4 class="section-title style-1 mb-30 animated animated">Top Selling</h4>
+                    <h4 class="section-title style-1 mb-30 animated animated">{{__('home.top selling')}}</h4>
                     <div class="product-list-small animated animated">
                         <article class="row align-items-center hover-up">
                             <figure class="col-md-4 mb-0">
@@ -3125,7 +3125,7 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-md-0 wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
-                    <h4 class="section-title style-1 mb-30 animated animated">Trending Products</h4>
+                    <h4 class="section-title style-1 mb-30 animated animated">{{__('home.trending products')}}</h4>
                     <div class="product-list-small animated animated">
                         <article class="row align-items-center hover-up">
                             <figure class="col-md-4 mb-0">
@@ -3190,7 +3190,7 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-sm-5 mb-md-0 d-none d-lg-block wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
-                    <h4 class="section-title style-1 mb-30 animated animated">Recently added</h4>
+                    <h4 class="section-title style-1 mb-30 animated animated">{{__('home.recently added')}}</h4>
                     <div class="product-list-small animated animated">
                         <article class="row align-items-center hover-up">
                             <figure class="col-md-4 mb-0">
@@ -3255,7 +3255,7 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-sm-5 mb-md-0 d-none d-xl-block wow animate__animated animate__fadeInUp" data-wow-delay=".3s">
-                    <h4 class="section-title style-1 mb-30 animated animated">Top Rated</h4>
+                    <h4 class="section-title style-1 mb-30 animated animated">{{__('home.top rated')}}</h4>
                     <div class="product-list-small animated animated">
                         <article class="row align-items-center hover-up">
                             <figure class="col-md-4 mb-0">
