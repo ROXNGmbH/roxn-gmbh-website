@@ -1,7 +1,7 @@
 <aside class="navbar-aside" id="offcanvas_aside">
     <div class="aside-top">
         <a href="/" class="brand-wrap">
-            <img src="{{asset('/assets/admin/imgs/brands/logo-main.png')}}" class="logo" alt="Nest Dashboard" />
+            <img src="{{asset('/images/logo-main.png')}}" class="logo" alt="Nest Dashboard" />
         </a>
         <div>
             <button class="btn btn-icon btn-aside-minimize"><i class="text-muted material-icons md-menu_open"></i></button>
@@ -9,6 +9,9 @@
     </div>
     <nav>
         <ul class="menu-aside">
+            <a href="{{ route('logout') }}" class="menu-link px-5" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Sign
+                Out</a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">@csrf</form>
             <li class="menu-item {{ Request::is('admin/dashboard*') ? 'active' : '' }} ">
                 <a class="menu-link" href="{{route('dashboard')}}">
                     <i class="icon material-icons md-home"></i>

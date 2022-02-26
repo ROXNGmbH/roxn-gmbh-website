@@ -39,6 +39,11 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 */
 //Auth::routes();
 
+Route::group(['prefix' => LaravelLocalization::setLocale(),   'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
+],function () {
+
+});
+
 Route::group(['prefix' => LaravelLocalization::setLocale(),
     'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
 ], function () {
@@ -64,7 +69,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),
 
 });
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin','middleware'=>['auth','admin']], function () {
+
     Route::get('dashboard', [Dashboard::class, 'index'])->name('dashboard');
     Route::resource('products', ProductController::class);
     Route::resource('categories', CategoryController::class);
