@@ -70,7 +70,6 @@ class PromoCodeController extends Controller
             return redirect()->route('promo-codes.index');
 
         } catch (\Exception $exception) {
-            dd($exception->getMessage());
             toast('Something error !', 'error');
             return redirect()->route('promo-codes.index');
         }

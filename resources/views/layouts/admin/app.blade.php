@@ -14,7 +14,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" rel="stylesheet" />
 
     <!-- Mix Webpack js file -->
-    <script src="{{asset('js/app.js')}}"></script>
+    <script src="{{asset('js/admin.js')}}"></script>
 
     @yield('page-head')
 </head>

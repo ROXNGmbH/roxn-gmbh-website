@@ -41,7 +41,6 @@ class CategoryController extends Controller
         $data = $request->validate([
             'name_ar' => 'required|string',
             'name_de' => 'required|string',
-            'status' => 'sometimes',
             'image' => 'sometimes|image|mimes:jpg,png,jpeg|max:2048',
         ]);
 
@@ -52,7 +51,7 @@ class CategoryController extends Controller
                     'ar' => $data['name_ar'],
                     'de' => $data['name_de']
                 ],
-                'status' => $data['status'] == "on" ? 1 : 0,
+                'status' => $request->status == "on" ? 1 : 0,
             ]);
 
             if ($request->hasFile('image')) {

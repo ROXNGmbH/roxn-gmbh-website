@@ -135,6 +135,7 @@
                 placeholder: "Select Category"
             }).on('change', function(e) {
                 let category  = $("#category").val();
+                console.log(category);
                 axios.get('/api/sub-categories/'+category)
                     .then(function (response) {
                         let categories = response.data.sub_categories;
